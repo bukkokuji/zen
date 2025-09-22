@@ -1,232 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bukkoku-ji Zen Monastery</title>
-  <!-- AOS library for fade-in animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>佛國寺</title>
   <style>
     body {
-      font-family: 'Merriweather', 'Noto Serif JP', serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff;
+      font-family: 'Noto Serif JP', serif;
+      background: #fff;
       color: #222;
       line-height: 1.7;
     }
+
     header {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
       position: fixed;
-      width: 100%;
       top: 0;
-      z-index: 1000;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0.5rem 1rem;
-    }
-    nav a {
-      position: relative;
-      text-decoration: none;
-      color: #222;
-      margin: 0 1rem;
-      font-weight: 500;
-      padding-bottom: 5px;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
       left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: #000;
-      transition: width 0.3s ease;
-    }
-    nav a:hover::after {
       width: 100%;
-    }
-    .hero {
-      background: url("images/hero.jpg") no-repeat center center/cover;
-      height: 80vh;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1000;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-      margin-top: 60px;
     }
-    .hero h1 {
-      font-size: 3rem;
-      text-align: center;
-    }
-    section {
-      width: 100%;
-      padding: 4rem 10%;
-      box-sizing: border-box;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
+
+    .logo {
+      position: relative;
       font-size: 2rem;
       font-weight: bold;
+      color: #000;
     }
-    section p {
-      margin-bottom: 1.2rem;
-      text-align: justify;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+
+    .logo img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;   /* ~3 cm */
+      height: auto;
+      opacity: 0.2;
+      z-index: 0;
     }
-    .image-placeholder {
+
+    .logo span {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
       width: 100%;
-      height: 350px;
-      background: #eee;
-      margin: 2rem 0;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #aaa;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
     }
-    footer {
-      background: #f4f4f4;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      border-top: 1px solid #ddd;
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-      .hero h1 {
-        font-size: 2rem;
-      }
+
+    img.full {
+      width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
-  .logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.logo img.seal {
-  position: absolute;
-  left: -10px;   /* adjust position */
-  top: -10px;
-  width: 60px;   /* size of the seal */
-  height: auto;
-  opacity: 0.15; /* faded look, watermark style */
-  z-index: 0;
-}
-
-.logo span {
-  position: relative;
-  z-index: 1; /* keep text above the seal */
-}
-
 </head>
 <body>
 
 <header>
-  <nav>
-    <div class="logo">
-  <img src="images/seal.svg" alt="Bukkoku-ji seal" class="seal">
-  <span>Bukkoku-ji</span>
-</div>
-
-    <div>
-      <a href="#about">About</a>
-      <a href="#village">Zen Village</a>
-      <a href="#practice">Practice</a>
-      <a href="#teachings">Teachings</a>
-      <a href="#access">Access</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  <div class="logo">
+    <img src="images/seal.svg" alt="佛國寺印">
+    <span>佛國寺</span>
+  </div>
 </header>
 
-<div class="hero" data-aos="fade-in">
-  <h1>Bukkoku-ji Zen Monastery</h1>
-</div>
+<main>
+  <section>
+    <h1>曹洞宗 佛國寺</h1>
+  </section>
 
-<section id="about" data-aos="fade-up">
-  <h2>About</h2>
-  <div class="image-placeholder">Temple Image</div>
-  <p>
-    Bukkoku-ji (佛國寺), located in Obama City, Fukui Prefecture, is a Zen monastery of the Sōtō Zen tradition. 
-    It was long guided by the late Harada Daisetsu Tangen Rōshi, and is now under the leadership of Abbot Harada Kōgaku. 
-    The temple follows the Sōtō Zen lineage of meditation and monastic practice.
-  </p>
-</section>
+  <section>
+    <img src="images/temple.jpg" alt="佛國寺" class="full">
+  </section>
 
-<section id="village" data-aos="fade-up">
-  <h2>Zen Village</h2>
-  <div class="image-placeholder">Daily Life Image</div>
-  <p>
-    Life at Bukkoku-ji is dedicated to the practice of Zen in daily activities. Monks and lay practitioners share in 
-    zazen, chanting, work practice (samu), and communal life, embodying simplicity and mindfulness.
-  </p>
-</section>
+  <section>
+    <p>福井県小浜市に位置する禅寺、佛國寺は、原田湛玄老師の教えを受け継ぎ、現在は原田晃岳住職のもとで修行と教化を続けています。</p>
+  </section>
 
-<section id="practice" data-aos="fade-up">
-  <h2>Practice</h2>
-  <div class="image-placeholder">Zazen Image</div>
-  <p>
-    Zazen (sitting meditation) is the heart of the practice at Bukkoku-ji. The monastery also hosts sesshin 
-    (intensive meditation retreats) throughout the year, open to both Japanese and international practitioners.
-  </p>
-</section>
+  <section>
+    <img src="images/garden.jpg" alt="庭園" class="full">
+  </section>
+</main>
 
-<section id="teachings" data-aos="fade-up">
-  <h2>Teachings</h2>
-  <div class="image-placeholder">Dharma Talk Image</div>
-  <p>
-    Dharma talks and teachings are offered regularly, both at the temple and through recordings. 
-    Practitioners are invited to learn directly from the abbot and senior monks.
-  </p>
-</section>
-
-<section id="access" data-aos="fade-up">
-  <h2>Access</h2>
-  <div class="image-placeholder">Map Image</div>
-  <p>
-    Address: 38-9 Fushiwara, Obama City, Fukui Prefecture 917-0054, Japan.  
-    Please search “Bukkoku-ji, Obama, Fukui” in Google Maps for directions.
-  </p>
-</section>
-
-<section id="contact" data-aos="fade-up">
-  <h2>Contact</h2>
-  <p>Phone: +81 (0)770-52-3504</p>
-  <p>Email: (not publicly listed)</p>
-  <p>
-    For inquiries, please contact the monastery by phone or by visiting in person. 
-    Practitioners from abroad are welcome, though advance notice is required.
-  </p>
-</section>
-
-<footer>
-  <p>&copy; Bukkoku-ji Zen Monastery | Sōtō Zen Tradition</p>
-</footer>
-
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1200,
-    once: true
-  });
+  function handleScroll() {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9 && rect.bottom > 50) {
+        section.classList.add("visible");
+      } else {
+        section.classList.remove("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("load", handleScroll);
 </script>
 
 </body>
