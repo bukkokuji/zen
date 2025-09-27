@@ -1,14 +1,17 @@
-function handleScroll() {
-  const sections = document.querySelectorAll("section");
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.9 && rect.bottom > 50) {
-      section.classList.add("visible");
-    } else {
-      section.classList.remove("visible");
-    }
-  });
-}
+// Header effect: transparent at top, solid on scroll
+window.addEventListener("scroll", function() {
+  const header = document.getElementById("header");
+  if (window.scrollY > 50) {
+    header.classList.remove("transparent");
+    header.classList.add("scrolled");
+  } else {
+    header.classList.add("transparent");
+    header.classList.remove("scrolled");
+  }
+});
 
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("load", handleScroll);
+// Initial state
+document.addEventListener("DOMContentLoaded", function() {
+  const header = document.getElementById("header");
+  header.classList.add("transparent");
+});
