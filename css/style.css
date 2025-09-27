@@ -91,13 +91,26 @@ nav a:hover::after {
   justify-content: center;
 }
 
-
 .hero-text h1 {
   font-family: 'Yuji Syuku', serif;
-  font-size: 4rem;
+  font-size: 5rem;  /* larger */
   color: white;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  text-align: center;
 }
+
+/* Two-column layout for lists on large screens */
+#schedule ul {
+  columns: 2;
+  column-gap: 40px;
+}
+
+@media (max-width: 768px) {
+  #schedule ul {
+    columns: 1;
+  }
+}
+
 
 main {
   padding: 60px 10%;
