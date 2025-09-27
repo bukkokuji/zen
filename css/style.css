@@ -15,12 +15,14 @@ header {
   background: rgba(255, 255, 255, 0.9);
   z-index: 1000;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo {
   position: relative;
   font-size: 2rem;
+  font-family: 'Yuji Syuku', 'Shippori Mincho B1', serif;
   font-weight: bold;
   color: #000;
 }
@@ -32,13 +34,43 @@ header {
   transform: translate(-50%, -50%);
   width: 80px;   /* ~3 cm */
   height: auto;
-  opacity: 0.2;
+  opacity: 0.4;  /* stronger red */
   z-index: 0;
 }
 
 .logo span {
   position: relative;
   z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Noto Serif JP', serif;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 section {
@@ -50,7 +82,7 @@ section {
   font-size: 1.5rem;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 section.visible {
