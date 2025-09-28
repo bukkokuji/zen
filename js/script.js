@@ -1,4 +1,3 @@
-// Header effect: transparent at top, solid on scroll
 window.addEventListener("scroll", function() {
   const header = document.getElementById("header");
   if (window.scrollY > 50) {
@@ -10,7 +9,6 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// Initial state
 document.addEventListener("DOMContentLoaded", function() {
   const header = document.getElementById("header");
   header.classList.add("transparent");
