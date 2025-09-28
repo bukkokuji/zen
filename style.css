@@ -1,0 +1,117 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Yuji Syuku', serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+}
+
+header.transparent {
+  background: none;
+  color: #fff;
+}
+
+header.scrolled {
+  background: #fff;
+  color: #000;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 70px;
+  opacity: 0.9;
+}
+
+.logo span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: black;
+  pointer-events: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: inherit;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  font-weight: normal;
+}
+
+.content {
+  padding: 80px 15%;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInOnly 3s ease forwards;
+}
+
+@keyframes fadeInOnly {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
