@@ -3,91 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>福應山 佛國寺</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Brush-style Japanese font -->
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header with logo + menu -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/seal.png" alt="seal">
+      <span>佛國寺</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#history">歴史や由緒</a></li>
+        <li><a href="index.html#schedule">日課</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header id="header">
-  <div class="logo">
-    <img src="images/seal.svg" alt="佛國寺印">
-    <span>佛國寺</span>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#history">歴史や由緒</a></li>
-      <li><a href="#schedule">日課</a></li>
-      <li><a href="#contact">お問い合わせ</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Hero section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Hero" class="hero-img">
+    <div class="hero-text fade-in">
+      <h1>福應山 佛國寺</h1>
+    </div>
+  </section>
 
-<!-- Hero section with background image -->
-<section id="hero">
-  <div class="hero-text">
-    <h1>福應山 佛國寺</h1>
-  </div>
-</section>
-
-<main>
-  <!-- History section -->
-  <section id="history">
+  <!-- History -->
+  <section id="history" class="fade-in">
     <h2>歴史や由緒</h2>
     <p>
       佛國寺は福應山と号し、曹洞宗の坐禅道場。<br><br>
-
       若州武田家五代、武田元信公の開基で、文亀二年（1502年）の創建。<br><br>
-
-      開山は順應慶随大和尚であり、佛國の寺名の定りたる由縁は、開山の御修行中、中国を巡拝修行。<br>
-      さらに朝鮮国を巡り慶州の古刹道場仏国寺に安居行道なされ、やがて帰国の時、若狭の地の国主武田氏の拝請により新寺建立に際し、極めて印象深き仏国の寺名を頂き、定められた趣が推量される。<br><br>
-
+      開山は順應慶随大和尚であり、佛國の寺名の定りたる由縁は、開山の御修行中、中国を巡拝修行。さらに朝鮮国を巡り慶州の古刹道場仏国寺に安居行道なされ、やがて帰国の時、若狭の地の国主武田氏の拝請により新寺建立に際し、極めて印象深き仏国の寺名を頂き、定められた趣が推量される。<br><br>
       境内に開基元信公の五輪墓がある。<br><br>
-
       現在は朝晩の坐禅と年7回の接心会を行い、国内外からの参禅者を常に受け入れている。
     </p>
   </section>
 
-  <!-- Annual schedule -->
-  <section id="schedule">
-    <h2>年間行事</h2>
-    <ul>
-      <li>接心会（2月、4月、5月、6月、10月、11月、12月、各月1日～7日）</li>
-      <li>大般若祈祷会（1月1日～3日暁天）</li>
-      <li>釈尊涅槃会（3月15日・午後1時半）</li>
-      <li>彼岸会大施餓鬼会（春秋彼岸中日・午後3時）</li>
-      <li>釈尊降誕会（5月8日）</li>
-      <li>盆会大施餓鬼会（8月7日・午後3時）</li>
-      <li>地蔵尊祭禮（10月24日・午後1時半）</li>
-      <li>釈尊成道会・開運香講会（12月8日・午後1時半）</li>
-      <li>観音例祭（毎月18日午後1時半）</li>
-    </ul>
-
+  <!-- Daily schedule -->
+  <section id="schedule" class="fade-in">
     <h2>日課</h2>
-    <ul>
-      <li>5:00 振鈴（起床）</li>
-      <li>5:40 ～ 6:20 坐禅</li>
-      <li>6:20 ～ 7:20 朝課（朝のお経）</li>
-      <li>7:20 ～ 8:00 粥座（朝食）</li>
-      <li>8:00 ～ 8:30 清掃</li>
-      <li>9:30 ～ 11:00 作務（境内、墓地、庭の清掃等）</li>
-      <li>11:30 ～ 12:00 斉座（昼食）</li>
-      <li>13:30 ～ 15:00 作務</li>
-      <li>16:00 ～ 16:15 晩課（夕方のお経）</li>
-      <li>17:30 ～ 18:00 薬席（夕食）</li>
-      <li>18:20 ～ 19:00 坐禅（隨坐）</li>
-      <li>19:20 ～ 20:00 坐禅</li>
-      <li>20:20 ～ 21:00 坐禅</li>
-      <li>21:00 開枕（就寝）</li>
-    </ul>
-
-    <p>四九日（4、9、14、19、24、29日）は作務がありません。</p>
+    <p>
+      5：00 振鈴（起床）<br>
+      5：40 ～ 6：20 坐禅<br>
+      6：20 ～ 7：20 朝課（朝のお経）<br>
+      7：20 ～ 8：00 粥座（朝食）<br>
+      8：00 ～ 8：30 清掃<br>
+      9：30 ～ 11：00 作務<br>
+      11：30 ～ 12：00 斉座（昼食）<br>
+      13：30 ～ 15：00 作務<br>
+      16：00 ～ 16：15 晩課（夕方のお経）<br>
+      17：30 ～ 18：00 薬席（夕食）<br>
+      18：20 ～ 19：00 坐禅（隨坐）<br>
+      19：20 ～ 20：00 坐禅<br>
+      20：20 ～ 21：00 坐禅<br>
+      21：00 開枕（就寝）<br><br>
+      ※四九日（4、9、14、19、24、29日）は作務がありません。
+    </p>
   </section>
 
-  <!-- Contact -->
-<li><a href="contact.html">お問い合わせ</a></li>
-
-
-<script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
