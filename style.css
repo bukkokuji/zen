@@ -59,7 +59,7 @@ header.scrolled {
 
 nav ul {
   list-style: none;
-  margin: 0;
+  margin: -100px;
   padding: 0;
   display: flex;
   gap: 30px;
