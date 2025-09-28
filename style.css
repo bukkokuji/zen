@@ -32,22 +32,29 @@ header.scrolled {
 .logo {
   position: relative;
   display: inline-block;
-  text-decoration: none;
 }
 
 .logo img {
-  width: 70px;
-  opacity: 0.9;
-}
-
-.logo span {
+  width: 60px;              /* adjust size */
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.5;             /* transparency */
+  z-index: 1;               /* stay behind text */
+}
+
+.logo-text {
+  font-family: 'Yuji Syuku', serif;
   font-size: 2rem;
   color: black;
-  pointer-events: none;
+  position: relative;
+  z-index: 2;               /* appear in front of seal */
+  writing-mode: horizontal-tb;  /* ensure horizontal */
+  text-orientation: mixed;
+}
+
 }
 
 nav ul {
