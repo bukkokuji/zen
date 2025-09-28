@@ -1,18 +1,132 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>福應山 佛國寺</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>佛國寺 — Bukkoku-ji</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Basic reset */
+    * { box-sizing: border-box; margin:0; padding:0; }
+
+    html,body { height:100%; }
+
+    body {
+      font-family: 'Noto Serif JP', serif;
+      background: #fff;
+      color: #222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right:0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 36px;
+      background: rgba(255,255,255,0.0);
+      transition: background .3s ease, border-bottom .3s ease, color .3s ease;
+      z-index:1100;
+    }
+    header.scrolled { background: #fff; border-bottom:1px solid #eee; color:#000; }
+
+    .logo {
+      position: relative;
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo img { width:72px; height:auto; opacity:0.45; display:block; }
+    .logo .name {
+      font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+      font-size:1.6rem;
+      font-weight:400;
+      color:inherit;
+      line-height:1;
+    }
+
+    nav ul { list-style:none; display:flex; gap:28px; align-items:center; margin-left:40px; }
+    nav a {
+      color: #fff;
+      text-decoration:none;
+      font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+      font-weight:400;
+      font-size:1.05rem;
+      position:relative;
+      padding-bottom:4px;
+      transition:color .25s ease;
+    }
+    header.scrolled nav a { color:#111; }
+    nav a::after {
+      content:''; position:absolute; left:0; bottom:0; height:2px; width:0; background:currentColor; transition:width .25s ease;
+    }
+    nav a:hover::after { width:100%; }
+
+    /* Hero - full screen image */
+    .hero {
+      position:relative;
+      height:100vh;
+      overflow:hidden;
+    }
+    .hero .bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+    .hero .overlay {
+      position:absolute; inset:0; background: rgba(0,0,0,0.25);
+    }
+    .hero .center {
+      position:relative;
+      z-index:40;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 6%;
+      text-align:center;
+    }
+    .hero h1 {
+      font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+      font-size:4.5rem;
+      color:#fff;
+      font-weight:400;
+      text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+      opacity:0;
+    }
+
+    /* sections */
+    main { padding-top:84px; }
+    section { padding:84px 6%; max-width:1200px; margin:0 auto; }
+    h2 { font-family:'Yuji Syuku', 'Noto Serif JP', serif; font-size:2rem; margin-bottom:18px; font-weight:400; }
+    p, li { font-size:1.05rem; color:#333; }
+
+    /* Two column list for schedule on wide screens */
+    .columns { column-count:2; column-gap:40px; }
+    @media (max-width:900px){ .columns { column-count:1; } .hero h1 { font-size:3rem; } nav ul { gap:18px; } }
+
+    /* AOS helper: stronger fade */
+    [data-aos] { opacity:0; transform: translateY(16px); transition: all .9s cubic-bezier(.2,.9,.2,1); }
+    [data-aos].aos-animate { opacity:1; transform:none; }
+
+    /* small utilities */
+    .centered { max-width:1100px; margin:0 auto; }
+
+    footer { padding:36px 6%; text-align:center; color:#666; border-top:1px solid #f0f0f0; }
+  </style>
 </head>
 <body>
-  <!-- Header with logo + menu -->
-  <header>
-    <a href="index.html" class="logo">
-      <img src="images/seal.jpg" alt="seal">
-      <span>佛國寺</span>
+
+  <header id="site-header">
+    <a class="logo" href="index.html">
+      <img src="images/seal.svg" alt="佛國寺 印章">
+      <div class="name">佛國寺</div>
     </a>
+
     <nav>
       <ul>
         <li><a href="index.html#history">歴史や由緒</a></li>
@@ -22,48 +136,74 @@
     </nav>
   </header>
 
-  <!-- Hero section -->
   <section class="hero">
-    <img src="images/hero.webp" alt="Hero" class="hero-img">
-    <div class="hero-text fade-in">
-      <h1>福應山 佛國寺</h1>
+    <img class="bg" src="images/hero.jpg" alt="hero">
+    <div class="overlay"></div>
+    <div class="center">
+      <h1 data-aos="fade" data-aos-duration="3000">福應山 佛國寺</h1>
     </div>
   </section>
 
-  <!-- History -->
-  <section id="history" class="fade-in">
-    <h2>歴史や由緒</h2>
-    <p>
-      佛國寺は福應山と号し、曹洞宗の坐禅道場。<br><br>
-      若州武田家五代、武田元信公の開基で、文亀二年（1502年）の創建。<br><br>
-      開山は順應慶随大和尚であり、佛國の寺名の定りたる由縁は、開山の御修行中、中国を巡拝修行。さらに朝鮮国を巡り慶州の古刹道場仏国寺に安居行道なされ、やがて帰国の時、若狭の地の国主武田氏の拝請により新寺建立に際し、極めて印象深き仏国の寺名を頂き、定められた趣が推量される。<br><br>
-      境内に開基元信公の五輪墓がある。<br><br>
-      現在は朝晩の坐禅と年7回の接心会を行い、国内外からの参禅者を常に受け入れている。
-    </p>
-  </section>
+  <main>
+    <section id="history" data-aos="fade-up" data-aos-duration="900">
+      <div class="centered">
+        <h2>歴史や由緒</h2>
+        <p>佛國寺は福應山と号し、曹洞宗の坐禅道場。</p>
+        <p>若州武田家五代、武田元信公の開基で、文亀二年（1502年）の創建。</p>
+        <p>開山は順應慶随大和尚であり、佛國の寺名の定りたる由縁は、開山の御修行中、中国を巡拝修行。さらに朝鮮国を巡り慶州の古刹道場仏国寺に安居行道なされ、やがて帰国の時、若狭の地の国主武田氏の拝請により新寺建立に際し、極めて印象深き仏国の寺名を頂き、定められた趣が推量される。</p>
+        <p>境内に開基元信公の五輪墓がある。</p>
+        <p>現在は朝晩の坐禅と年7回の接心会を行い、国内外からの参禅者を常に受け入れている。</p>
+      </div>
+    </section>
 
-  <!-- Daily schedule -->
-  <section id="schedule" class="fade-in">
-    <h2>日課</h2>
-    <p>
-      5：00 振鈴（起床）<br>
-      5：40 ～ 6：20 坐禅<br>
-      6：20 ～ 7：20 朝課（朝のお経）<br>
-      7：20 ～ 8：00 粥座（朝食）<br>
-      8：00 ～ 8：30 清掃<br>
-      9：30 ～ 11：00 作務<br>
-      11：30 ～ 12：00 斉座（昼食）<br>
-      13：30 ～ 15：00 作務<br>
-      16：00 ～ 16：15 晩課（夕方のお経）<br>
-      17：30 ～ 18：00 薬席（夕食）<br>
-      18：20 ～ 19：00 坐禅（隨坐）<br>
-      19：20 ～ 20：00 坐禅<br>
-      20：20 ～ 21：00 坐禅<br>
-      21：00 開枕（就寝）<br><br>
-      ※四九日（4、9、14、19、24、29日）は作務がありません。
-    </p>
-  </section>
+    <section id="schedule" data-aos="fade-up" data-aos-duration="900">
+      <div class="centered">
+        <h2>日課 / 年間行事</h2>
+        <div class="columns">
+          <ul>
+            <li>5：00 振鈴（起床）</li>
+            <li>5：40 ～ 6：20 坐禅</li>
+            <li>6：20 ～ 7：20 朝課（朝のお経）</li>
+            <li>7：20 ～ 8：00 粥座（朝食）</li>
+            <li>8：00 ～ 8：30 清掃</li>
+            <li>9：30 ～ 11：00 作務（境内、墓地、庭の清掃等）</li>
+            <li>11：30 ～ 12：00 斉座（昼食）</li>
+            <li>13：30 ～ 15：00 作務</li>
+          </ul>
+          <ul>
+            <li>16：00 ～ 16：15 晩課（夕方のお経）</li>
+            <li>17：30 ～ 18：00 薬席（夕食）</li>
+            <li>18：20 ～ 19：00 坐禅（隨坐）</li>
+            <li>19：20 ～ 20：00 坐禅</li>
+            <li>20：20 ～ 21：00 坐禅</li>
+            <li>21：00 開枕（就寝）</li>
+            <li>※四九日（4、9、14、19、24、29日）は作務がありません。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <footer class="centered">
+    <div>〒917-0054 福井県小浜市伏原38-9 — 電話: 0770-52-3504</div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: false, mirror: true });
+
+    // header background toggle
+    const header = document.getElementById('site-header');
+    function checkHeader(){
+      if(window.scrollY > 60) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    }
+    window.addEventListener('scroll', checkHeader);
+    window.addEventListener('load', function(){
+      checkHeader();
+      const h = document.querySelector('.hero h1');
+      if(h) h.setAttribute('data-aos','fade');
+    });
+  </script>
 </body>
 </html>
