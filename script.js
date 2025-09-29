@@ -1,15 +1,15 @@
-window.addEventListener("scroll", function() {
-  const header = document.getElementById("header");
-  if (window.scrollY > 50) {
-    header.classList.remove("transparent");
-    header.classList.add("scrolled");
-  } else {
-    header.classList.add("transparent");
-    header.classList.remove("scrolled");
-  }
-});
+// Initialize AOS (allows fade every time you scroll up/down)
+AOS && AOS.init({ duration: 1200, once: false, mirror: true });
 
-document.addEventListener("DOMContentLoaded", function() {
+// Header background toggle on scroll
+document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById("header");
-  header.classList.add("transparent");
+  function checkHeader() {
+    if (window.scrollY > 50) header.classList.add("scrolled");
+    else header.classList.remove("scrolled");
+  }
+  // initial state
+  if (header) header.classList.add("transparent");
+  checkHeader();
+  window.addEventListener("scroll", checkHeader);
 });
