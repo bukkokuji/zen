@@ -1,124 +1,128 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Yuji Syuku', serif;
-  scroll-behavior: smooth;
+/* reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* base */
+html,body { height: 100%; }
+body {
+  font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+  color: #222;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* Header */
 header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 40px;
+  top: 0; left: 0; right: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  transition: background 0.3s ease, color 0.3s ease;
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 18px 36px;
+  z-index: 1100;
+  transition: background .25s ease, color .25s ease, border-bottom .25s ease;
 }
 
-header.transparent {
-  background: none;
-  color: #fff;
-}
+/* transparent on hero */
+header.transparent { background: rgba(0,0,0,0); color: #fff; }
+header.scrolled   { background: #fff; color: #111; border-bottom: 1px solid #eee; }
 
-header.scrolled {
-  background: #fff;
-  color: #000;
-  border-bottom: 2px solid #ddd;
-}
-
-.logo {
+/* Logo: seal as background + text on top (horizontal) */
+a.logo {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  color: inherit;
+  width: auto;
+  height: auto;
 }
 
-.logo img {
-  width: 70px;
-  opacity: 0.9;
+a.logo img {
+  display: block;
+  width: 72px;           /* adjust seal size */
+  height: auto;
+  opacity: 0.85;
 }
 
-.logo span {
+/* text placed centered over the seal — forced horizontal */
+a.logo > span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-family: 'Yuji Syuku', serif;
-  color: black;
-  pointer-events: none;
+  font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+  font-size: 1.9rem;
+  font-weight: 400;      /* not bold */
+  color: currentColor;
+  pointer-events: none;  /* clicking hits the anchor (seal area) */
+  white-space: nowrap;   /* keep horizontal on single line */
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  z-index: 2;
 }
 
-nav {
-  transform: translateX(-3cm); /* shift menu 3cm left */
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 40px; /* a little more space between items */
-}
-
+/* Nav - positioned at the right but shifted left (-6cm) on wide screens */
+nav { transform: translateX(-6cm); } /* shift left about 6cm */
+nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
 nav a {
   text-decoration: none;
-  font-size: 1.6rem; /* bigger */
   color: inherit;
+  font-size: 1.15rem;
+  font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+  font-weight: 400;
   position: relative;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* shading */
+  padding-bottom: 4px;
 }
-
 nav a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
+  left: 0; bottom: -3px;
+  width: 0; height: 2px;
   background: currentColor;
-  transition: width 0.3s ease;
+  transition: width .25s ease;
 }
+nav a:hover::after { width: 100%; }
 
-nav a:hover::after {
-  width: 100%;
-}
-
+/* Hero */
 .hero {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
+.hero-overlay {
+  position:absolute; inset:0; background: rgba(0,0,0,0.25);
+}
+.hero-text { position: relative; z-index: 20; padding: 0 6%; }
 
+/* Hero title style (large, brush font, not bold) */
 .hero-text h1 {
-  font-size: 6rem;
-  color: white;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.7); /* stronger shading */
-  font-weight: normal;
+  font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
+  font-size: 5.5rem;
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  line-height: 1.05;
+  margin: 0;
 }
 
-.content {
-  padding: 80px 15%;
-}
+/* Content sections */
+main { padding-top: 110px; } /* prevent header overlap */
+.content { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
+.content h2 { font-size: 2.2rem; margin-bottom: 14px; font-weight: 400; }
 
-.content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* shading */
-}
+/* AOS helper (stronger fade and allow repeat) — AOS itself handles animation */
+[data-aos] { will-change: transform, opacity; }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeInOnly 4s ease forwards; /* slower fade */
-}
-
-@keyframes fadeInOnly {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* responsive adjustments */
+@media (max-width: 900px) {
+  nav { transform: none; }
+  .hero-text h1 { font-size: 3rem; }
+  a.logo img { width: 56px; }
+  a.logo > span { font-size: 1.4rem; }
+  nav ul { gap: 18px; }
+  main { padding-top: 90px; }
 }
