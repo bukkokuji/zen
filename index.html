@@ -4,15 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>福應山 佛國寺</title>
+
+  <!-- AOS for repeated scroll fade -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Header: single, correct structure -->
   <header id="header" class="transparent">
     <a href="index.html" class="logo">
-      <img src="images/seal.svg" alt="seal">
+      <img src="images/seal.svg" alt="佛國寺 印章">
       <span>佛國寺</span>
     </a>
+
     <nav>
       <ul>
         <li><a href="index.html#history">歴史や由緒</a></li>
@@ -22,34 +29,35 @@
     </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="history.html">歴史や由緒</a></li>
-      <li><a href="schedule.html">日課</a></li>
-      <li><a href="contact.html">お問い合わせ</a></li>
-    </ul>
-  </nav>
-</header>
-
-
+  <!-- Hero -->
   <section class="hero" style="background-image: url('images/hero.webp');">
-    <div class="hero-text fade-in">
-      <h1>福應山 佛國寺</h1>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <!-- data-aos makes the title fade every time you scroll into view (AOS configured in script.js) -->
+      <h1 data-aos="fade" data-aos-duration="3000">福應山　佛國寺</h1>
     </div>
   </section>
 
+  <!-- Content -->
   <main>
-    <section id="history" class="content fade-in">
+    <section id="history" class="content" data-aos="fade-up" data-aos-duration="900">
       <h2>歴史や由緒</h2>
       <p>佛國寺は福應山と号し、曹洞宗の坐禅道場。若州武田家五代、武田元信公の開基で、文亀二年（1502年）の創建。 ...</p>
     </section>
 
-    <section id="schedule" class="content fade-in">
+    <section id="schedule" class="content" data-aos="fade-up" data-aos-duration="900">
       <h2>日課</h2>
       <p>5:00 起床、5:40〜6:20 坐禅、6:20〜7:20 朝課 ...</p>
     </section>
   </main>
 
+  <footer>
+    <p style="text-align:center; padding:28px 0; color:#666;">〒917-0054 福井県小浜市伏原38-9 — 電話: 0770-52-3504</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Your script -->
   <script src="script.js"></script>
 </body>
 </html>
