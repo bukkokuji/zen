@@ -61,12 +61,12 @@ a.logo > span {
 }
 
 /* Nav - positioned at the right but shifted left (-6cm) on wide screens */
-nav { transform: translateX(-6cm); } /* shift left about 6cm */
+nav { transform: translateX(-3cm); } /* shift left about 6cm */
 nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
 nav a {
   text-decoration: none;
   color: inherit;
-  font-size: 1.15rem;
+  font-size: 1.6rem;
   font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
   font-weight: 400;
   position: relative;
