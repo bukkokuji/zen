@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お問い合わせ - 福應山 佛國寺</title>
+
+  <!-- AOS CSS (required for AOS animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
@@ -23,12 +27,13 @@
   </header>
 
   <section class="hero" style="background-image: url('images/contact-hero.webp');">
-    <div class="hero-text fade-in">
-      <h1>お問い合わせ</h1>
+    <div class="hero-text">
+      <!-- use AOS for repeated fade -->
+      <h1 data-aos="fade" data-aos-duration="3000">お問い合わせ</h1>
     </div>
   </section>
 
-  <main class="content fade-in">
+  <main class="content" data-aos="fade-up" data-aos-duration="900">
     <h2>連絡先</h2>
     <p>住所: 〒917-0054 福井県小浜市伏原38-9</p>
     <p>電話: 0770-52-3504</p>
@@ -39,6 +44,10 @@
       width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </main>
 
+  <!-- AOS JS (must be loaded before our script so AOS is available) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- your script (safe version below) -->
   <script src="script.js"></script>
 </body>
 </html>
