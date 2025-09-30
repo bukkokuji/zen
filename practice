@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>修行 — 福應山 佛國寺</title>
+
+  <!-- AOS CSS (same as other pages) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="header" class="transparent">
+    <a href="index.html" class="logo">
+      <img src="images/seal.svg" alt="佛國寺 印章">
+      <span>佛國寺</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="practice.html" class="active">修行</a></li>
+        <li><a href="schedule.html">年間行事</a></li>
+        <li><a href="sesshin.html">接心</a></li>
+        <li><a href="history.html">歴史や由緒</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="background-image: url('images/practice-hero.webp');">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1 data-aos="fade" data-aos-duration="2200">修行について</h1>
+      <p data-aos="fade" data-aos-duration="2400">佛國寺で行われる坐禅、接心、日々の作務などの実践について。</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>坐禅（ざぜん）</h2>
+      <p>
+        本堂で行う朝夕の坐禅は佛國寺の基本的な修行です。初心者向けの指導も行っていますので、初めての方もご参加ください。
+      </p>
+    </section>
+
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>接心（せっしん）</h2>
+      <p>
+        年に数回行う接心（集中的な坐禅会）では、日常の煩わしさから離れ、集中して実践を深めます。事前の申し込みや規約が必要な場合があります。
+      </p>
+    </section>
+
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>作務（さむ）・日課</h2>
+      <p>
+        境内や寺務の作業（作務）は修行の一環です。規則正しい生活・共同作業を通して身を整えます。詳細は参加案内でご確認ください。
+      </p>
+    </section>
+
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>お問い合わせ・参加方法</h2>
+      <p>
+        参加希望や詳細は <a href="contact.html">お問い合わせページ</a> からご連絡ください。宿泊参禅や日帰り参加の条件、持ち物、参加費についてご案内します。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center; padding:24px 0; color:#666;">〒917-0054 福井県小浜市伏原38-9 — 電話: 0770-52-3504</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
