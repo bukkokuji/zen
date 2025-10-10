@@ -1,18 +1,37 @@
+// Include header and footer dynamically
+function includeHTML() {
+  const includeElement = (id, file) => {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => document.getElementById(id).innerHTML = data)
+      .then(() => {
+        if(id === "header-placeholder") setupHeader(); // activer le scroll après inclusion
+      });
+  };
+  includeElement("header-placeholder", "header.html");
+  includeElement("footer-placeholder", "footer.html");
+}
+
+// Header scroll / transparent
+function setupHeader() {
+  const header = document.getElementById("header");
+  if (!header) return;
+
+  const checkHeader = () => {
+    if (window.scrollY > 50) header.classList.add("scrolled");
+    else header.classList.remove("scrolled");
+  };
+
+  header.classList.add("transparent");
+  checkHeader();
+  window.addEventListener("scroll", checkHeader);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize AOS only if it's loaded on the page
+  includeHTML(); // inclut le header/footer
+
+  // Initialize AOS
   if (typeof AOS !== "undefined" && AOS && typeof AOS.init === "function") {
     AOS.init({ duration: 1200, once: false, mirror: true });
   }
-
-  // Header background toggle on scroll
-  const header = document.getElementById("header");
-  function checkHeader() {
-    if (!header) return;
-    if (window.scrollY > 50) header.classList.add("scrolled");
-    else header.classList.remove("scrolled");
-  }
-
-  if (header) header.classList.add("transparent");
-  checkHeader();
-  window.addEventListener("scroll", checkHeader);
 });
