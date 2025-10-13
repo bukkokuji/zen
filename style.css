@@ -132,7 +132,7 @@ main { padding-top: 110px; } /* prevent header overlap */
    ================================ */
 
 main {
-  background: url('images/papyrus-bg.webp') center center / cover no-repeat fixed;
+  background: url('images/papyrus-bg.jpg') center center / cover no-repeat fixed;
   background-blend-mode: multiply;
   background-color: rgba(245, 235, 220, 0.9); /* teinte sépia douce */
   padding: 80px 20px;
