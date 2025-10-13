@@ -148,7 +148,11 @@ main p {
   text-align: justify;
   text-justify: inter-character;
   text-indent: 1.5em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-break: strict;
 }
+
 
 main h2 {
   font-size: 1.8rem;
