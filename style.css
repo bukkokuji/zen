@@ -131,46 +131,65 @@ main { padding-top: 110px; } /* prevent header overlap */
    Style pour la page "歴史や由緒" (history.html)
    ================================ */
 
-main {
-  background: url('images/papyrus-bg.jpg') center center / cover no-repeat fixed;
-  background-blend-mode: multiply;
-  background-color: rgba(245, 235, 220, 0.9); /* teinte sépia douce */
-  padding: 80px 20px;
-  line-height: 2;
-  font-size: 1.3rem;
-  letter-spacing: 0.05em;
-  color: #2b1c0f;
+body.history-page {
+  position: relative;
+  background-color: #f5ebdc;
   font-family: "Yuji Syuku", serif;
+  color: #2b1c0f;
 }
 
-main p {
-  margin-bottom: 1.8em;
+/* Fond papyrus plus transparent (sans affecter le texte) */
+body.history-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('images/papyrus-bg.jpg') center center / cover no-repeat;
+  opacity: 0.12; /* 👈 ajuste ici la transparence : 0.05 = très léger, 0.25 = plus marqué */
+  pointer-events: none;
+  z-index: -1;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.6); /* légère teinte pour adoucir le fond */
+  backdrop-filter: blur(1px);
+  padding: 100px 40px;
+  margin: 0 auto;
+  max-width: 1000px; /* largeur accrue pour aérer */
+  line-height: 2.4;
+  font-size: 1.4rem; /* texte plus grand */
+  letter-spacing: 0.04em;
   text-align: justify;
   text-justify: inter-character;
-  text-indent: 1.5em;
   word-break: keep-all;
   overflow-wrap: break-word;
   line-break: strict;
 }
 
-
+/* Titres */
 main h2 {
-  font-size: 1.8rem;
-  margin: 2em 0 1em;
+  font-size: 1.9rem;
+  margin: 2.5em 0 1.2em;
   text-align: center;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
 }
 
+/* Paragraphes */
+main p {
+  margin-bottom: 2em;
+  text-indent: 1.5em;
+}
+
+/* Figures générales */
 main figure {
-  margin: 1.5em auto;
-  max-width: 600px;
+  margin: 2em auto;
+  max-width: 650px;
   text-align: center;
 }
 
 main figcaption {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #5e4c3c;
-  margin-top: 0.3em;
+  margin-top: 0.4em;
 }
 
 /* Images flottantes (pour les abbés) */
@@ -186,19 +205,19 @@ main figure.left {
   max-width: 45%;
 }
 
-/* Empêcher le texte de coller à la fin des flottants */
+/* Nettoyage après flottants */
 main::after {
   content: "";
   display: block;
   clear: both;
 }
 
-/* Images des abbés : même taille, même style */
+/* Images des abbés : taille harmonisée */
 figure.abbot img {
   width: 100%;
-  max-width: 320px; /* taille fixe harmonieuse */
-  aspect-ratio: 3 / 4; /* portrait vertical */
-  object-fit: cover; /* recadre proprement sans déformation */
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -212,10 +231,14 @@ figure.abbot figcaption {
   color: #3a2b1a;
 }
 
+/* Image du cimetière (pleine largeur + fondu doux) */
 figure.cemetery-fade {
   position: relative;
   overflow: hidden;
-  margin-top: 3em;
+  width: 100vw; /* pleine largeur de la fenêtre */
+  margin-left: 50%;
+  transform: translateX(-50%); /* recentre proprement */
+  margin-top: 4em;
 }
 
 figure.cemetery-fade img {
@@ -228,7 +251,7 @@ figure.cemetery-fade img {
 
 figure.cemetery-fade figcaption {
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-top: 0.5em;
   color: #3a2b1a;
 }
