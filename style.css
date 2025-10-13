@@ -193,3 +193,42 @@ main::after {
   clear: both;
 }
 
+/* Images des abbés : même taille, même style */
+figure.abbot img {
+  width: 100%;
+  max-width: 320px; /* taille fixe harmonieuse */
+  aspect-ratio: 3 / 4; /* portrait vertical */
+  object-fit: cover; /* recadre proprement sans déformation */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+figure.abbot {
+  text-align: center;
+  margin: 1.5em auto;
+}
+figure.abbot figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+  color: #3a2b1a;
+}
+
+figure.cemetery-fade {
+  position: relative;
+  overflow: hidden;
+  margin-top: 3em;
+}
+
+figure.cemetery-fade img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+}
+
+figure.cemetery-fade figcaption {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 0.5em;
+  color: #3a2b1a;
+}
