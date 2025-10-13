@@ -126,3 +126,66 @@ main { padding-top: 110px; } /* prevent header overlap */
   nav ul { gap: 18px; }
   main { padding-top: 90px; }
 }
+
+/* ================================
+   Style pour la page "歴史や由緒" (history.html)
+   ================================ */
+
+main {
+  background: url('images/papyrus-bg.webp') center center / cover no-repeat fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(245, 235, 220, 0.9); /* teinte sépia douce */
+  padding: 80px 20px;
+  line-height: 2;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: #2b1c0f;
+  font-family: "Yuji Syuku", serif;
+}
+
+main p {
+  margin-bottom: 1.8em;
+  text-align: justify;
+  text-justify: inter-character;
+  text-indent: 1.5em;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  margin: 2em 0 1em;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+main figure {
+  margin: 1.5em auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+main figcaption {
+  font-size: 0.95rem;
+  color: #5e4c3c;
+  margin-top: 0.3em;
+}
+
+/* Images flottantes (pour les abbés) */
+main figure.right {
+  float: right;
+  margin: 0 0 1em 2em;
+  max-width: 45%;
+}
+
+main figure.left {
+  float: left;
+  margin: 0 2em 1em 0;
+  max-width: 45%;
+}
+
+/* Empêcher le texte de coller à la fin des flottants */
+main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
