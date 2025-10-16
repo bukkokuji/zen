@@ -132,31 +132,18 @@ main { padding-top: 110px; } /* prevent header overlap */
    ================================ */
 
 body.history-page {
-  position: relative;
-  background-color: #f5ebdc;
+  background-color: #fff; /* fond blanc pur */
   font-family: "Yuji Syuku", serif;
   color: #2b1c0f;
 }
 
-/* Fond papyrus plus transparent (sans affecter le texte) */
-body.history-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url('images/papyrus-bg.jpg') center center / cover no-repeat;
-  opacity: 0.12; /* 👈 ajuste ici la transparence : 0.05 = très léger, 0.25 = plus marqué */
-  pointer-events: none;
-  z-index: -1;
-}
-
 main {
-  background-color: rgba(255, 255, 255, 0.6); /* légère teinte pour adoucir le fond */
-  backdrop-filter: blur(1px);
+  background-color: transparent;
   padding: 100px 40px;
   margin: 0 auto;
-  max-width: 1000px; /* largeur accrue pour aérer */
-  line-height: 2.4;
-  font-size: 1.4rem; /* texte plus grand */
+  max-width: 950px;
+  line-height: 2.3;
+  font-size: 1.4rem;
   letter-spacing: 0.04em;
   text-align: justify;
   text-justify: inter-character;
@@ -231,13 +218,13 @@ figure.abbot figcaption {
   color: #3a2b1a;
 }
 
-/* Image du cimetière (pleine largeur + fondu doux) */
+/* Image du cimetière : pleine largeur + fondu */
 figure.cemetery-fade {
   position: relative;
   overflow: hidden;
-  width: 100vw; /* pleine largeur de la fenêtre */
+  width: 100vw;
   margin-left: 50%;
-  transform: translateX(-50%); /* recentre proprement */
+  transform: translateX(-50%);
   margin-top: 4em;
 }
 
