@@ -1,79 +1,51 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ - 福應山 佛國寺</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-<body>
+<main class="contact-content">
 
-  <header>
-    <!-- Contenu de l'en-tête -->
-  </header>
-
-  <section class="hero" style="background-image: url('images/hero-contact.jpg');">
-    <div class="hero-text">
-      <h1 data-aos="fade" data-aos-duration="3000">お問い合わせ</h1>
-    </div>
-  </section>
-
-  <main class="content" data-aos="fade-up" data-aos-duration="900">
-    <h2>連絡先</h2>
-    <p>住所: 〒917-0054 福井県小浜市伏原38-9</p>
-    <p>電話: 0770-52-3504</p>
-    <p>E-mail: 公開情報なし</p>
-
-    <h2>アクセス</h2>
+  <!-- Informations pratiques -->
+  <section class="contact-info">
+    <h2>お問い合わせ・アクセス</h2>
     <ul>
+      <li>住所: 〒917-0054 福井県小浜市伏原38-9</li>
+      <li>電話: 0770-52-3504</li>
+      <li>E-mail: 公開情報なし</li>
+      <li>アクセス: 小浜駅から徒歩約10分</li>
       <li>駐車場あり</li>
-      <li>小浜駅から徒歩約10分</li>
-      <li>アクセスマップ:</li>
+      <li>アクセス自由。ガイド付き見学や修行体験は、英語・日本語いずれもメールで事前にお申し込みください。</li>
     </ul>
     <iframe
       width="100%"
-      height="500"
-      style="border:0"
+      height="400"
+      style="border:0;"
       loading="lazy"
       allowfullscreen
       referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=福井県小浜市伏原38-9">
     </iframe>
+  </section>
 
-    <h2>お問い合わせフォーム</h2>
+  <!-- Formulaire de contact -->
+  <section class="contact-form">
+    <h2>メッセージを送る</h2>
     <form action="submit_form.php" method="POST">
-      <label for="name">お名前:</label>
-      <input type="text" id="name" name="name" required><br><br>
+      <label for="name">お名前</label>
+      <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
 
-      <label for="email">メールアドレス:</label>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
 
-      <label for="message">メッセージ:</label><br>
-      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      <label for="message">メッセージ</label>
+      <textarea id="message" name="message" rows="5" placeholder="ご質問やお問い合わせ内容をご記入ください" required></textarea>
 
       <button type="submit">送信</button>
     </form>
+  </section>
 
-    <h2>よくある質問 (FAQ)</h2>
-    <dl>
-      <dt>Q: 寺院の見学は可能ですか？</dt>
-      <dd>A: はい、自由に見学できます。ガイド付きの見学や修行体験をご希望の場合は、事前にメールでご連絡ください。</dd>
-
-      <dt>Q: 駐車場はありますか？</dt>
-      <dd>A: はい、寺院敷地内に駐車場があります。</dd>
-
-      <dt>Q: 英語での対応は可能ですか？</dt>
-      <dd>A: はい、英語での対応も可能です。</dd>
-    </dl>
-
+  <!-- Instagram -->
+  <section class="contact-instagram">
     <h2>Instagram</h2>
-    <p>最新の情報や写真は、公式Instagramをご覧ください。</p>
-    <a href="https://www.instagram.com/bukkokuji.fukui.obama/" target="_blank">@bukkokuji.fukui.obama</a>
-  </main>
+    <p>Suivez l’actualité du temple sur Instagram</p>
+    <a href="https://www.instagram.com/bukkokuji.fukui.obama/" target="_blank">
+      <img src="images/instagram-logo.png" alt="Instagram" class="instagram-logo">
+    </a>
+  </section>
 
-
-  <div id="footer-placeholder"></div>
-</body>
-</html>
+</main>
