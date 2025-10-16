@@ -5,46 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お問い合わせ - 福應山 佛國寺</title>
 
-  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
   <style>
     /* ==========================
-       Page contact style “cartes”
+       Style général contact
        ========================== */
-
     main.contact-content {
       padding: 60px 20px;
       font-family: "Yuji Syuku", serif;
       color: #2b1c0f;
       max-width: 1200px;
       margin: 0 auto;
+      font-size: 1.2rem;
     }
 
     h2.section-title {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5em;
+      font-size: 2.2rem;
+      margin-bottom: 1.8em;
       letter-spacing: 0.1em;
     }
 
-    /* Carte générale */
+    /* Cartes d'information */
     .info-cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5em;
+      gap: 2em;
       justify-content: center;
       margin-bottom: 3em;
     }
 
     .card {
       background-color: #fff8f0;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      padding: 20px;
-      flex: 1 1 280px;
-      max-width: 350px;
+      padding: 25px;
+      flex: 1 1 400px;
+      max-width: 480px;
       transition: transform 0.2s;
     }
 
@@ -54,13 +53,14 @@
 
     .card h3 {
       margin-top: 0;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: #8b5e3c;
+      margin-bottom: 0.5em;
     }
 
     .card p, .card li {
-      line-height: 1.6;
-      font-size: 1rem;
+      line-height: 1.8;
+      font-size: 1.15rem;
     }
 
     .card ul {
@@ -68,27 +68,47 @@
       margin: 0;
     }
 
-    /* Formulaire amélioré */
+    /* Instagram au-dessus du formulaire */
+    .instagram-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      margin: 3em 0 1.5em;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #2b1c0f;
+    }
+
+    .instagram-link img {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* Formulaire de contact */
     .contact-form form {
       display: grid;
-      gap: 1em;
+      gap: 1.2em;
       background: #fff8f0;
-      padding: 20px;
-      border-radius: 12px;
+      padding: 25px;
+      border-radius: 14px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
     }
 
     .contact-form label {
       font-weight: bold;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-family: "Yuji Syuku", serif;
     }
 
@@ -96,9 +116,9 @@
       background-color: #8b5e3c;
       color: #fff;
       border: none;
-      padding: 12px;
+      padding: 14px;
       border-radius: 6px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: background 0.2s;
     }
@@ -107,40 +127,32 @@
       background-color: #a5724b;
     }
 
-    /* Instagram */
-    .instagram-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: center;
-      margin: 2em 0;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #2b1c0f;
-    }
-
-    .instagram-link img {
-      width: 32px;
-      height: 32px;
-    }
-
-    /* Carte Google en bas */
+    /* Carte Google full width réelle */
     .map-container {
-      margin-top: 3em;
-      width: 100%;
-      height: 500px;
+      margin-top: 4em;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      height: 550px;
     }
 
     .map-container iframe {
       width: 100%;
       height: 100%;
       border: 0;
+      display: block;
     }
 
     @media(max-width: 800px){
       .info-cards {
         flex-direction: column;
         align-items: center;
+      }
+      .card {
+        max-width: 95%;
       }
     }
 
@@ -157,7 +169,7 @@
 
   <main class="contact-content" data-aos="fade-up" data-aos-duration="900">
 
-    <!-- Cartes informations -->
+    <!-- Cartes d'informations -->
     <section class="info-cards">
       <div class="card">
         <h3>住所・電話</h3>
@@ -172,20 +184,33 @@
         <ul>
           <li>小浜駅から徒歩約10分</li>
           <li>駐車場あり</li>
-          <li>アクセス自由。ガイド付き見学や修行体験は、英語・日本語でメール予約可能</li>
+          <li>参拝自由。英語・日本語での見学・体験をご希望の方はメールでご連絡ください。</li>
         </ul>
       </div>
     </section>
 
-    <!-- Formulaire de contact -->
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/bukkokuji.fukui.obama/" target="_blank" class="instagram-link">
+      <img src="images/instagram-logo.png" alt="Instagram">
+      インスタグラムで最新情報をフォロー
+    </a>
+
+    <!-- Formulaire -->
     <section class="contact-form">
-      <h2 class="section-title">メッセージを送る</h2>
-      <form action="submit_form.php" method="POST">
+      <h2 class="section-title">連絡フォーム</h2>
+      <form id="contactForm" method="POST">
         <label for="name">お名前</label>
         <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
 
         <label for="email">メールアドレス</label>
         <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+        <label for="subject">連絡の対象</label>
+        <select id="subject" name="subject" required>
+          <option value="jp">日本語での情報を希望します</option>
+          <option value="en">英語での情報を希望します</option>
+          <option value="abbot">ご住職に直接連絡したい（儀式など）</option>
+        </select>
 
         <label for="message">メッセージ</label>
         <textarea id="message" name="message" rows="5" placeholder="ご質問やお問い合わせ内容をご記入ください" required></textarea>
@@ -194,13 +219,7 @@
       </form>
     </section>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/bukkokuji.fukui.obama/" target="_blank" class="instagram-link">
-      <img src="images/instagram-logo.png" alt="Instagram">
-      Instagramで寺院の最新情報をフォローしてください
-    </a>
-
-    <!-- Google Map full-width en bas -->
+    <!-- Google Map full-width -->
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.617682018981!2d135.74469467660152!3d35.494118541284446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f6c07efdd73%3A0x9c52765b8f9cb59f!2z6ICD5Z-O5aSn!5e0!3m2!1sja!2sjp!4v1739466012345!5m2!1sja!2sjp"
@@ -211,8 +230,39 @@
 
   <div id="footer-placeholder"></div>
 
-  <!-- AOS JS -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+
+  <!-- Redirection du mail selon le choix -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const subject = document.getElementById('subject').value;
+      let actionUrl = '';
+
+      switch (subject) {
+        case 'jp':
+          actionUrl = 'mailto:info-jp@bukkokuji.jp';
+          break;
+        case 'en':
+          actionUrl = 'mailto:info-en@bukkokuji.jp';
+          break;
+        case 'abbot':
+          actionUrl = 'mailto:abbot@bukkokuji.jp';
+          break;
+      }
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const body = encodeURIComponent(
+        `お名前: ${name}\nメール: ${email}\n\n${message}`
+      );
+
+      window.location.href = `${actionUrl}?subject=${encodeURIComponent('お問い合わせ')}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
