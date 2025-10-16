@@ -12,11 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 <body>
- <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
   <section class="hero" style="background-image: url('images/hero-contact.jpg');">
     <div class="hero-text">
-      <!-- use AOS for repeated fade -->
       <h1 data-aos="fade" data-aos-duration="3000">お問い合わせ</h1>
     </div>
   </section>
@@ -28,17 +27,20 @@
     <p>E-mail: 公開情報なし</p>
 
     <h2>地図</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.5720746807767!2d135.744967!3d35.495287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f6c07efdd73%3A0x9c52765b8f9cb59f!2z6ICD5Z-O5aSn!5e0!3m2!1sja!2sjp!4v1697882397492!5m2!1sja!2sjp" 
-      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </main>
 
-  <!-- AOS JS (must be loaded before our script so AOS is available) -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Google Map full-width -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.617682018981!2d135.74469467660152!3d35.494118541284446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f6c07efdd73%3A0x9c52765b8f9cb59f!2z6ICD5Z-O5aSn!5e0!3m2!1sja!2sjp!4v1739466012345!5m2!1sja!2sjp"
+      width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
 
-  <!-- your script (safe version below) -->
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 
   <div id="footer-placeholder"></div>
-  
 </body>
 </html>
