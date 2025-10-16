@@ -329,13 +329,39 @@ PAGE CONTACT
   background-color: #52371b;
 }
 
-.contact-instagram {
+.instagram-link {
   text-align: center;
-  margin-top: 3em;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  margin: 2em 0;
+  color: #333;
+  font-family: "Yuji Syuku", serif;
 }
 
-.instagram-logo {
-  width: 50px;
-  height: 50px;
-  margin-top: 0.5em;
+.instagram-link a {
+  color: #b03b7f;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
 }
+
+.instagram-link a:hover {
+  color: #e4405f;
+  background-color: rgba(228, 64, 95, 0.1);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.instagram-icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.instagram-link a:hover .instagram-icon {
+  transform: scale(1.2);
+}
+
