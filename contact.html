@@ -1,51 +1,78 @@
-<main class="contact-content">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ - 福應山 佛國寺</title>
 
-  <!-- Informations pratiques -->
-  <section class="contact-info">
-    <h2>お問い合わせ・アクセス</h2>
-    <ul>
-      <li>住所: 〒917-0054 福井県小浜市伏原38-9</li>
-      <li>電話: 0770-52-3504</li>
-      <li>E-mail: 公開情報なし</li>
-      <li>アクセス: 小浜駅から徒歩約10分</li>
-      <li>駐車場あり</li>
-      <li>アクセス自由。ガイド付き見学や修行体験は、英語・日本語いずれもメールで事前にお申し込みください。</li>
-    </ul>
-    <iframe
-      width="100%"
-      height="400"
-      style="border:0;"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=福井県小浜市伏原38-9">
+  <!-- AOS CSS (required for AOS animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="hero" style="background-image: url('images/hero-contact.jpg');">
+    <div class="hero-text">
+      <h1 data-aos="fade" data-aos-duration="3000">お問い合わせ</h1>
+    </div>
+  </section>
+
+  <main class="contact-content" data-aos="fade-up" data-aos-duration="900">
+
+    <!-- Informations pratiques -->
+    <section class="contact-info">
+      <h2>お問い合わせ・アクセス</h2>
+      <ul>
+        <li>住所: 〒917-0054 福井県小浜市伏原38-9</li>
+        <li>電話: 0770-52-3504</li>
+        <li>E-mail: 公開情報なし</li>
+        <li>小浜駅から徒歩約10分</li>
+        <li>駐車場あり</li>
+        <li>アクセス自由。ガイド付き見学や修行体験は、英語・日本語いずれもメールで事前にお申し込みください。</li>
+      </ul>
+     <!-- Google Map full-width -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.617682018981!2d135.74469467660152!3d35.494118541284446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f6c07efdd73%3A0x9c52765b8f9cb59f!2z6ICD5Z-O5aSn!5e0!3m2!1sja!2sjp!4v1739466012345!5m2!1sja!2sjp"
+      width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
     </iframe>
-  </section>
+  </div>
+    </section>
 
-  <!-- Formulaire de contact -->
-  <section class="contact-form">
-    <h2>メッセージを送る</h2>
-    <form action="submit_form.php" method="POST">
-      <label for="name">お名前</label>
-      <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
+    <!-- Formulaire de contact -->
+    <section class="contact-form">
+      <h2>メッセージを送る</h2>
+      <form action="submit_form.php" method="POST">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
 
-      <label for="email">メールアドレス</label>
-      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
 
-      <label for="message">メッセージ</label>
-      <textarea id="message" name="message" rows="5" placeholder="ご質問やお問い合わせ内容をご記入ください" required></textarea>
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" rows="5" placeholder="ご質問やお問い合わせ内容をご記入ください" required></textarea>
 
-      <button type="submit">送信</button>
-    </form>
-  </section>
+        <button type="submit">送信</button>
+      </form>
+    </section>
 
-  <!-- Instagram -->
-  <section class="contact-instagram">
-    <h2>Instagram</h2>
-    <p>Suivez l’actualité du temple sur Instagram</p>
-    <a href="https://www.instagram.com/bukkokuji.fukui.obama/" target="_blank">
-      <img src="images/instagram-logo.png" alt="Instagram" class="instagram-logo">
-    </a>
-  </section>
+    <!-- Instagram -->
+    <section class="contact-instagram">
+      <h2>Instagram</h2>
+      <p>Instagramで寺院の最新情報をフォローしてください</p>
+      <a href="https://www.instagram.com/bukkokuji.fukui.obama/" target="_blank">
+        <img src="images/instagram-logo.png" alt="Instagram" class="instagram-logo">
+      </a>
+    </section>
 
-</main>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
