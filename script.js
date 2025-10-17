@@ -35,25 +35,3 @@ document.addEventListener("DOMContentLoaded", function () {
     AOS.init({ duration: 1200, once: false, mirror: true });
   }
 });
-
-// FAQ déroulante
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const faqItem = button.parentElement;
-    faqItem.classList.toggle('active');
-  });
-});
-
-<script>
-  document.querySelectorAll(".faq-question").forEach(button => {
-    button.addEventListener("click", () => {
-      const answer = button.nextElementSibling;
-      button.classList.toggle("active");
-      if (button.classList.contains("active")) {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      } else {
-        answer.style.maxHeight = null;
-      }
-    });
-  });
-</script>
