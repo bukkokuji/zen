@@ -22,7 +22,9 @@ header {
   transition: background .25s ease, color .25s ease, border-bottom .25s ease;
 }
 header nav a {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 
+    0 0 3px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 
