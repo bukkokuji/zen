@@ -35,3 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
     AOS.init({ duration: 1200, once: false, mirror: true });
   }
 });
+
+// FAQ déroulante
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentElement;
+    faqItem.classList.toggle('active');
+  });
+});
