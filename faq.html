@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 
+  <script src="script.js">
 <body>
   <div id="header-placeholder"></div>
 
@@ -50,18 +51,5 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 
-  <script>
-    document.querySelectorAll(".faq-question").forEach(button => {
-      button.addEventListener("click", () => {
-        const answer = button.nextElementSibling;
-        button.classList.toggle("active");
-        if (button.classList.contains("active")) {
-          answer.style.maxHeight = answer.scrollHeight + "px";
-        } else {
-          answer.style.maxHeight = null;
-        }
-      });
-    });
-  </script>
 </body>
 </html>
