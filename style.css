@@ -20,6 +20,9 @@ header {
   padding: 18px 36px;
   z-index: 1100;
   transition: background .25s ease, color .25s ease, border-bottom .25s ease;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
 }
 
 /* transparent on hero */
