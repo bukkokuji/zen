@@ -22,10 +22,17 @@ header {
   transition: background .25s ease, color .25s ease, border-bottom .25s ease;
 }
 header nav a {
-  text-shadow: 
-    0 0 3px rgba(0, 0, 0, 0.6),
-    0 0 8px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7); /* effet d’ombre douce */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
+/* Optionnel : effet au survol (hover) */
+header nav a:hover {
+  color: #f0f0f0; /* un blanc un peu plus doux */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
 
 
 }
