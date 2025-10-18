@@ -39,7 +39,25 @@ header nav a:hover {
 
 /* transparent on hero */
 header.transparent { background: rgba(0,0,0,0); color: #fff; }
+header.transparent a,
+header.transparent .logo span {
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
 header.scrolled   { background: #fff; color: #111; border-bottom: 1px solid #eee; }
+header.scrolled a,
+header.scrolled .logo span {
+  color: #111;
+  text-shadow: none;
+}
+
+/* transition douce sur les liens du header */
+header a,
+header .logo span {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 
 /* Logo: seal as background + text on top (horizontal) */
 a.logo {
