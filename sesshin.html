@@ -9,41 +9,176 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Style zen moderne --- */
+
+    body {
+      background-color: #f7f5f1;
+      color: #333;
+      font-family: "Yuji Syuku", serif;
+      line-height: 1.9;
+    }
+
+    .hero {
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4em;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    /* sections */
+    main section {
+      max-width: 900px;
+      margin: 5em auto;
+      padding: 3em;
+      background: #fffdf9;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 1em;
+      color: #222;
+    }
+
+    section p {
+      text-align: justify;
+    }
+
+    /* Image centrale */
+    .image-center {
+      text-align: center;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .image-center img {
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+
+    .caption {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 0.6em;
+    }
+
+    /* Planning table */
+    .schedule-table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .schedule-table th {
+      background: #f0ede8;
+      font-weight: bold;
+      padding: 0.8em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .schedule-table td {
+      padding: 0.8em;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Encadré des règles */
+    .rules {
+      background: #faf8f3;
+      border-left: 5px solid #d5c8a8;
+    }
+
+    .rules ul {
+      list-style: none;
+      padding-left: 1em;
+    }
+
+    .rules li {
+      margin-bottom: 1em;
+    }
+
+    /* Lien de contact */
+    a {
+      color: #6c5e3f;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #a58956;
+    }
+
+  </style>
 </head>
+
 <body>
 
   <div id="header-placeholder"></div>
 
   <!-- Hero -->
-  <section class="hero" style="background-image: url('images/sesshin-hero.jpg');background-size: cover;background-position: center;">
+  <section class="hero" style="background-image: url('images/sesshin-hero.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <h1 data-aos="fade" data-aos-duration="2000">接心</h1>
-      <p data-aos="fade" data-aos-duration="2400">集中的に坐禅を行う修行期間についての案内</p>
+      <p data-aos="fade" data-aos-duration="2400">心を静める修行期間 — 集中と沈黙の道</p>
     </div>
   </section>
 
   <main>
 
     <!-- Introduction -->
-    <section class="content wide" data-aos="fade-up" data-aos-duration="900">
+    <section data-aos="fade-up" data-aos-duration="900">
       <h2>接心とは</h2>
       <p>
-        接心（せっしん）とは、日常の喧騒から離れ、心を一つにして仏道修行に専念する期間です。<br>
-        「接心」とは、文字通り「心を接する」という意味であり、自らの本心と深く向き合い、仏の心と一つになることを目指します。<br><br>
-        この期間中は、一切の私語を断ち、坐禅・勤行・作務を通して一呼吸ごとに「いま」に集中します。<br>
-        佛國寺では、年に数回、四日から七日程度の接心を行い、初心者から経験者まで、誰もが静かに修行に身を置くことができます。
+        接心（せっしん）とは、日常の喧騒を離れ、心を一つにして仏道修行に専念する期間です。<br>
+        「接心」とは「心を接する」という意味で、自らの本心と深く向き合い、仏の心と一つになることを目指します。<br><br>
+        この期間中は沈黙の中で坐禅・勤行・作務を行い、一呼吸ごとに「今ここ」に全てを委ねます。<br>
+        佛國寺では、年に数回、四日から七日程度の接心を行い、初心者から経験者まで静かに修行に専念できます。
       </p>
     </section>
 
     <!-- Image -->
-    <section class="content image-center" data-aos="zoom-in" data-aos-duration="1000">
-      <img src="images/sesshin-hall.jpg" alt="接心風景" class="content-image" style="max-width: 80%; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+    <section class="image-center" data-aos="zoom-in" data-aos-duration="1000">
+      <img src="images/sesshin-hall.jpg" alt="接心風景">
       <p class="caption">早朝の坐禅堂（例）</p>
     </section>
 
     <!-- Schedule -->
-    <section class="content" data-aos="fade-up" data-aos-duration="900">
+    <section data-aos="fade-up" data-aos-duration="900">
       <h2>一日の流れ（例）</h2>
       <table class="schedule-table">
         <tr><th>時間</th><th>内容</th></tr>
@@ -55,11 +190,11 @@
         <tr><td>午後</td><td>坐禅・参禅（面談）</td></tr>
         <tr><td>夜</td><td>晩課・就寝</td></tr>
       </table>
-      <p style="text-align:center; margin-top: 1em;">※ 寺により日程は異なる場合があります。</p>
+      <p style="text-align:center; margin-top: 1em;">※ 日程は寺により異なる場合があります。</p>
     </section>
 
     <!-- Rules -->
-    <section class="content rules" data-aos="fade-up" data-aos-duration="900">
+    <section class="rules" data-aos="fade-up" data-aos-duration="900">
       <h2>接心中の注意事項</h2>
       <ul>
         <li>• 接心は開始期間前日の夕方から開始し、最終日の21時まで行われます。その間、全ての場面で私語は禁止とします。また境内から外に出ることはできません。歩行禅は境内で行ってください。</li>
@@ -72,11 +207,11 @@
     </section>
 
     <!-- Application -->
-    <section class="content" data-aos="fade-up" data-aos-duration="900">
+    <section data-aos="fade-up" data-aos-duration="900">
       <h2>申し込み方法</h2>
-      <p>
+      <p style="text-align:center">
         接心への参加を希望される方は、<a href="contact.html">連絡ページ</a>よりお申し込みください。<br>
-        事前に詳細な案内（持ち物・集合時間・費用など）をお知らせいたします。
+        詳細な案内（持ち物・集合時間・費用など）を事前にお知らせいたします。
       </p>
     </section>
 
