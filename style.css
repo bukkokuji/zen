@@ -457,3 +457,37 @@ PAGE CONTACT
 .faq-question.active {
   background-color: #e3d8c5;
 }
+
+SESSHIN
+
+.schedule-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 0.8em 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-table th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+.rules ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+}
+
+.caption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
+  text-align: center;
+}
