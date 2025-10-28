@@ -500,3 +500,9 @@ p, li {
   word-break: normal;        /* conserve les coupures naturelles */
   letter-spacing: normal;    /* empêche l’espacement exagéré */
 }
+
+
+.vertical-japanese {
+  writing-mode: vertical-rl;   /* vertical, de droite à gauche */
+  text-orientation: upright;   /* caractères restent debout */
+}
