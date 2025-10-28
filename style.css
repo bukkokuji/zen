@@ -491,3 +491,12 @@ SESSHIN
   margin-top: 0.5em;
   text-align: center;
 }
+
+
+
+p, li {
+  text-align: left;          /* le texte reste naturel, aligné à gauche */
+  text-justify: auto;        /* évite la justification artificielle */
+  word-break: normal;        /* conserve les coupures naturelles */
+  letter-spacing: normal;    /* empêche l’espacement exagéré */
+}
