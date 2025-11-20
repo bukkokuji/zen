@@ -7,150 +7,14 @@
 
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
-
-  <style>
-    /* --- Style zen moderne --- */
-
-    body {
-      background-color: #f7f5f1;
-      color: #333;
-      font-family: "Yuji Syuku", serif;
-      line-height: 1.9;
-    }
-
-    .hero {
-      background-size: cover;
-      background-position: center;
-      height: 60vh;
-      position: relative;
-    }
-
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.3);
-      position: absolute;
-      inset: 0;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-    }
-
-    .hero-text h1 {
-      font-size: 3em;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.4em;
-    }
-
-    .hero-text p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-
-    /* sections */
-    main section {
-      max-width: 900px;
-      margin: 5em auto;
-      padding: 3em;
-      background: #fffdf9;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 1.8em;
-      margin-bottom: 1em;
-      color: #222;
-    }
-
-    section p {
-      text-align: justify;
-    }
-
-    /* Image centrale */
-    .image-center {
-      text-align: center;
-      background: transparent;
-      box-shadow: none;
-      padding: 0;
-    }
-
-    .image-center img {
-      width: 80%;
-      max-width: 700px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    }
-
-    .caption {
-      color: #666;
-      font-size: 0.9em;
-      margin-top: 0.6em;
-    }
-
-    /* Planning table */
-    .schedule-table {
-      width: 90%;
-      margin: 0 auto;
-      border-collapse: collapse;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-
-    .schedule-table th {
-      background: #f0ede8;
-      font-weight: bold;
-      padding: 0.8em;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .schedule-table td {
-      padding: 0.8em;
-      border-bottom: 1px solid #eee;
-    }
-
-    /* Encadré des règles */
-    .rules {
-      background: #faf8f3;
-      border-left: 5px solid #d5c8a8;
-    }
-
-    .rules ul {
-      list-style: none;
-      padding-left: 1em;
-    }
-
-    .rules li {
-      margin-bottom: 1em;
-    }
-
-    /* Lien de contact */
-    a {
-      color: #6c5e3f;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: #a58956;
-    }
-
-  </style>
 </head>
-
 <body>
-
   <div id="header-placeholder"></div>
 
-  <!-- Hero -->
-  <section class="hero" style="background-image: url('images/sesshin-hero.jpg');">
+  <section class="hero" style="background-image: url('images/sesshin-hero.jpg');background-size: 110%;background-position: 62% 52%">
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <h1 data-aos="fade" data-aos-duration="2000">接心</h1>
@@ -159,62 +23,55 @@
   </section>
 
   <main>
-
-    <!-- Introduction -->
-    <section data-aos="fade-up" data-aos-duration="900">
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
       <h2>接心とは</h2>
       <p>
-        接心（せっしん）とは、日常の喧騒を離れ、心を一つにして仏道修行に専念する期間です。<br>
-        「接心」とは「心を接する」という意味で、自らの本心と深く向き合い、仏の心と一つになることを目指します。<br><br>
-        この期間中は沈黙の中で坐禅・勤行・作務を行い、一呼吸ごとに「今ここ」に全てを委ねます。<br>
-        佛國寺では、年に数回、四日から七日程度の接心を行い、初心者から経験者まで静かに修行に専念できます。
+        接心（せっしん）は数日間にわたって行う集中的な坐禅会で、日常生活から離れて規則的に坐禅、朝課・晩課、作務を行い、深い実践に入るための場です。佛國寺では年に数回、通例は数日から一週間程度の接心を行っています。
       </p>
     </section>
 
-    <!-- Image -->
-    <section class="image-center" data-aos="zoom-in" data-aos-duration="1000">
-      <img src="images/sesshin-hall.jpg" alt="接心風景">
-      <p class="caption">早朝の坐禅堂（例）</p>
-    </section>
-
-    <!-- Schedule -->
-    <section data-aos="fade-up" data-aos-duration="900">
-      <h2>一日の流れ（例）</h2>
-      <table class="schedule-table">
-        <tr><th>時間</th><th>内容</th></tr>
-        <tr><td>04:30</td><td>振鈴・起床</td></tr>
-        <tr><td>05:00〜06:00</td><td>坐禅</td></tr>
-        <tr><td>06:20〜07:00</td><td>朝課（朝の勤行）</td></tr>
-        <tr><td>07:20〜08:00</td><td>粥座（朝食）</td></tr>
-        <tr><td>午前</td><td>作務・個別修行</td></tr>
-        <tr><td>午後</td><td>坐禅・参禅（面談）</td></tr>
-        <tr><td>夜</td><td>晩課・就寝</td></tr>
-      </table>
-      <p style="text-align:center; margin-top: 1em;">※ 日程は寺により異なる場合があります。</p>
-    </section>
-
-    <!-- Rules -->
-    <section class="rules" data-aos="fade-up" data-aos-duration="900">
-      <h2>接心中の注意事項</h2>
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>日程と参加条件（例）</h2>
+      <p>
+        接心の開催時期や日数は年度ごとに変わります。初めて参加する方は、事前に寺に連絡し、服装、持ち物、健康状態の確認をしてください。初心者向けの説明（初心者接心）を設ける場合もあります。
+      </p>
       <ul>
-        <li>• 接心は開始期間前日の夕方から開始し、最終日の21時まで行われます。その間、全ての場面で私語は禁止とします。また境内から外に出ることはできません。歩行禅は境内で行ってください。</li>
-        <li>• 2日に一回、各自割り当てられた時間内でシャワーを浴びることができます。髭剃りやドライヤー、香水、化粧品などの使用はお控えください。洗濯機の使用もできません。</li>
-        <li>• 携帯電話は接心開始前日にお預かりします。緊急の連絡が必要な場合は住職までお申し出ください。通話のみならず、メール、読書を含め集中を妨げる行為は一切禁じられています。</li>
-        <li>• 服装は黒や紺などの色で派手ではないものをご用意ください。坐禅、食事、読経の時間は靴下をお脱ぎください。冬場は携帯カイロの持参は可能です。</li>
-        <li>• 接心は大変集中力を要する修行であり、特に初心者の方にとっては厳しく感じられる場合があります。長時間の坐禅により足の痛みなどを感じることもありますが、それも修行の一部です。接心をやり遂げられるか不安のある方は、まず日常の坐禅時間に参加し慣れておくことをおすすめします。</li>
-        <li>• 接心の参加費用は、おひとりにつき3万円以上のお布施にて承ります。</li>
+        <li>開催期間（例）：各月の接心日、詳細は寺の告知を参照</li>
+        <li>参加費：必要に応じてお布施・実費がある場合があります</li>
+        <li>持ち物：動きやすい服、替えの下着、洗面用具、簡単な薬など</li>
       </ul>
     </section>
 
-    <!-- Application -->
-    <section data-aos="fade-up" data-aos-duration="900">
-      <h2>申し込み方法</h2>
-      <p style="text-align:center">
-        接心への参加を希望される方は、<a href="contact.html">連絡ページ</a>よりお申し込みください。<br>
-        詳細な案内（持ち物・集合時間・費用など）を事前にお知らせいたします。
-      </p>
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>一日の流れ（例）</h2>
+      <p>接心中の一日の標準的な流れ（例）：</p>
+      <ul>
+        <li>05:00 起床（振鈴）</li>
+        <li>05:40〜06:20 坐禅</li>
+        <li>06:20〜07:20 朝課（朝の勤行）</li>
+        <li>07:20〜08:00 粥座（朝食）</li>
+        <li>午前：作務・個別修行</li>
+        <li>午後：指導・参禅（面談）・坐禅</li>
+        <li>夜：晩課・就寝</li>
+      </ul>
+      <p>※寺ごとに細部は異なります。佛國寺での接心は寺の案内に従ってください。</p>
     </section>
 
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>注意事項・お願い</h2>
+      <ul>
+        <li>健康に不安がある方は事前に相談してください。</li>
+        <li>携帯電話は原則使用禁止、必要な連絡は事前に共有してください。</li>
+        <li>寺の規則（食事時間・作務など）に従ってください。</li>
+      </ul>
+    </section>
+
+    <section class="content" data-aos="fade-up" data-aos-duration="900">
+      <h2>申し込み方法</h2>
+      <p>
+        接心への参加を希望される場合は、<a href="contact.html">お問い合わせ</a>より日程と参加条件をご確認のうえ、お申し込みください。寺側から事前案内（持ち物・集合時間・参加費等）をお知らせします。
+      </p>
+    </section>
   </main>
 
   <div id="footer-placeholder"></div>
@@ -222,6 +79,5 @@
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
