@@ -500,8 +500,8 @@ SESSHIN
   margin-left: -50vw;
   margin-right: -50vw;
   overflow: hidden;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .full-photo-section img {
@@ -509,36 +509,6 @@ SESSHIN
   display: block;
   object-fit: cover;
   height: 450px;
-}
-
-/* TEXTE SUR L’IMAGE */
-.full-photo-text {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 900px;
-  padding: 20px 30px;
-  border-radius: 10px;
-  backdrop-filter: blur(6px);
-  transition: color 0.3s ease;
-}
-
-/* Texte noir par défaut */
-.full-photo-text h2,
-.full-photo-text p {
-  color: #222;
-  transition: color 0.3s ease;
-}
-
-/* Quand la souris entre sur la photo → texte devient blanc */
-.full-photo-section:hover .full-photo-text h2,
-.full-photo-section:hover .full-photo-text p {
-  color: white;
-  text-shadow: 0 0 7px rgba(0,0,0,0.7);
-}
-
 }
 
 .sesshin-button {
