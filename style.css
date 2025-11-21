@@ -526,6 +526,30 @@ SESSHIN
   background: #555;
 }
 
+/* Mise en forme du planning de la sesshin */
+.sesshin-schedule {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.sesshin-schedule ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;              /* 2 colonnes élégantes */
+  column-gap: 40px;
+}
+
+.sesshin-schedule li {
+  font-size: 1.3rem;       /* Kanji plus grands */
+  line-height: 2.2;
+  padding: 4px 0;
+  font-family: "Yuji Syuku", serif; /* plus traditionnel */
+  break-inside: avoid;     /* évite les coupures moches */
+}
+
+
 
 p, li {
   text-align: left;          /* le texte reste naturel, aligné à gauche */
