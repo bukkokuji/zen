@@ -542,7 +542,7 @@ SESSHIN
 }
 
 .sesshin-schedule li {
-  font-size: 1.3rem;       /* Kanji plus grands */
+  font-size: 2.3rem;       /* Kanji plus grands */
   line-height: 2.2;
   padding: 4px 0;
   font-family: "Yuji Syuku", serif; /* plus traditionnel */
