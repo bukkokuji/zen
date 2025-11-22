@@ -512,7 +512,9 @@ SESSHIN
 }
 
 .sesshin-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 32px;
   background: #111;
   color: #fff;
@@ -521,15 +523,17 @@ SESSHIN
   font-size: 1.25rem;
   font-family: "Yuji Syuku", serif;
   letter-spacing: 0.05em;
-  transition: 0.3s ease;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  line-height: 1;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
 
 .sesshin-button:hover {
   background: #000;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
+
 
 
 /* Mise en forme du planning de la sesshin */
