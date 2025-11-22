@@ -528,7 +528,7 @@ SESSHIN
 
 /* Mise en forme du planning de la sesshin */
 .sesshin-schedule {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 50px auto;
   text-align: center;
 }
