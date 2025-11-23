@@ -185,11 +185,11 @@ body.history-page {
   color: #2b1c0f;
 }
 
-body.history-page main {
+main {
   background-color: transparent;
   padding: 100px 40px;
   margin: 0 auto;
-  max-width: 950px;
+  max-width: 1200px;
   line-height: 2.3;
   font-size: 1.4rem;
   letter-spacing: 0.04em;
