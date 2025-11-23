@@ -185,7 +185,7 @@ body.history-page {
   color: #2b1c0f;
 }
 
-main {
+body.history-page main {
   background-color: transparent;
   padding: 100px 40px;
   margin: 0 auto;
