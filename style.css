@@ -367,9 +367,12 @@ PAGE CONTACT
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 0.05em;
-  margin: 2em 0;
   color: #333;
   font-family: "Yuji Syuku", serif;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
 
 .instagram-link a {
@@ -380,6 +383,10 @@ PAGE CONTACT
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
 
 .instagram-link a:hover {
@@ -398,6 +405,11 @@ PAGE CONTACT
 .instagram-link a:hover .instagram-icon {
   transform: scale(1.2);
 }
+
+.instagram-link img,
+.instagram-link a {
+}
+
 
 /* ================================
    Page FAQ
@@ -574,3 +586,4 @@ p, li {
   writing-mode: vertical-rl;   /* vertical, de droite à gauche */
   text-orientation: upright;   /* caractères restent debout */
 }
+
