@@ -587,3 +587,10 @@ p, li {
   text-orientation: upright;   /* caractères restent debout */
 }
 
+.contact-form label {
+  display: block;
+  text-align: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
