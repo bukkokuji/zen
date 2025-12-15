@@ -132,6 +132,13 @@ nav a:hover::after { width: 100%; }
 }
 .hero-text { position: relative; z-index: 20; padding: 0 6%; }
 
+.hero-text p {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 0.8em;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
 /* Hero title style (large, brush font, not bold) */
 .hero-text h1 {
   font-family: 'Yuji Syuku', 'Noto Serif JP', serif;
