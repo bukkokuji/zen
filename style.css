@@ -294,6 +294,10 @@ figure.cemetery-fade figcaption {
 
 PAGE CONTACT
 
+.contact-form {
+  font-size: 1.15rem;
+}
+
 .contact-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -334,12 +338,14 @@ PAGE CONTACT
 }
 
 .contact-form label {
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 500;    
+  font-size: 1.25rem;
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea 
+.contact-form select {
+  font-size: 1.15rem;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
