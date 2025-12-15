@@ -479,6 +479,22 @@ PAGE CONTACT
 
 SESSHIN
 
+/* Image spécifique à la page sesshin */
+body.sesshin-page figure.abbot.right {
+  float: right;
+  margin: 0 0 2em 3em;
+  max-width: 420px;
+}
+
+body.sesshin-page figure.abbot.right img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
 .schedule-table {
   width: 80%;
   margin: 0 auto;
