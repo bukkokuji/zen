@@ -36,26 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const kamonHero = document.querySelector(".practice-page .hero-text");
-  if (!kamonHero) return;
 
-  // apparition douce
-  setTimeout(() => {
-    kamonHero.classList.add("kamon-visible");
-  }, 400);
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.style.setProperty("--kamon-opacity", 0.05);
+  document.documentElement.style.setProperty("--kamon-shift", "0px");
 });
 
 window.addEventListener("scroll", () => {
-  const hero = document.querySelector(".practice-page .hero-text");
-  if (!hero) return;
-
   const scrollY = window.scrollY;
-  const maxScroll = 300; // zone d’effet
-  const intensity = Math.min(scrollY / maxScroll, 1);
 
-  hero.style.setProperty(
+  /* Intensité visuelle */
+  const opacityMaxScroll = 600;
+  const opacity = Math.min(scrollY / opacityMaxScroll, 1);
+  document.documentElement.style.setProperty(
     "--kamon-opacity",
-    0.07 + intensity * 0.06
+    0.05 + opacity * 0.08
+  );
+
+  /* Déplacement vertical très léger */
+  const shift = Math.min(scrollY / 12, 40); // max 40px
+  document.documentElement.style.setProperty(
+    "--kamon-shift",
+    `${shift}px`
   );
 });
