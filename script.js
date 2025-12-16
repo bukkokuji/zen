@@ -61,3 +61,14 @@ window.addEventListener("scroll", () => {
     `${shift}px`
   );
 });
+
+
+window.addEventListener("load", () => {
+  const subtitle = document.querySelector(".hero-subtitle");
+  if (subtitle) {
+    setTimeout(() => {
+      subtitle.style.opacity = "1";
+      subtitle.style.filter = "blur(0)";
+    }, 1200);
+  }
+});
