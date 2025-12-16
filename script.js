@@ -63,12 +63,10 @@ window.addEventListener("scroll", () => {
 });
 
 
-window.addEventListener("load", () => {
-  const subtitle = document.querySelector(".hero-subtitle");
-  if (subtitle) {
+<script>
+  window.addEventListener("load", () => {
     setTimeout(() => {
-      subtitle.style.opacity = "1";
-      subtitle.style.filter = "blur(0)";
-    }, 1200);
-  }
-});
+      document.querySelector(".hero")?.classList.add("loaded");
+    }, 2500); // délai AVANT que le fondu commence
+  });
+</script>
