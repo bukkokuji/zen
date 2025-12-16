@@ -160,8 +160,12 @@ HERO SUBTITLES
   opacity: 0;
   filter: blur(2px);
   transition:
-    opacity 3.5s ease,
+    opacity 3.5s ease-in-out;,
     filter 3.5s ease;
+}
+
+.hero.loaded .hero-subtitle {
+  opacity: 1;
 }
 
 /* Content sections */
