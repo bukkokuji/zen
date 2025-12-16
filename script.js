@@ -35,3 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
     AOS.init({ duration: 1200, once: false, mirror: true });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const kamonHero = document.querySelector(".practice-page .hero-text");
+  if (!kamonHero) return;
+
+  // apparition douce
+  setTimeout(() => {
+    kamonHero.classList.add("kamon-visible");
+  }, 400);
+});
