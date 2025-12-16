@@ -61,12 +61,3 @@ window.addEventListener("scroll", () => {
     `${shift}px`
   );
 });
-
-
-<script>
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.querySelector(".hero")?.classList.add("loaded");
-    }, 2500); // délai AVANT que le fondu commence
-  });
-</script>
