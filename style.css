@@ -150,6 +150,20 @@ nav a:hover::after { width: 100%; }
   margin: 0;
 }
 
+HERO SUBTITLES 
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-top: 1.2em;
+  line-height: 1.7;
+  opacity: 0;
+  filter: blur(2px);
+  transition:
+    opacity 3.5s ease,
+    filter 3.5s ease;
+}
+
 /* Content sections */
 main { padding-top: 110px; } /* prevent header overlap */
 .content { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
@@ -662,4 +676,3 @@ p, li {
 .sesshin-page .page-content::before {
   background-image: url("images/kamon-sesshin.jpg");
 }
-
