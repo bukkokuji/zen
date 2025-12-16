@@ -45,3 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
     kamonHero.classList.add("kamon-visible");
   }, 400);
 });
+
+window.addEventListener("scroll", () => {
+  const hero = document.querySelector(".practice-page .hero-text");
+  if (!hero) return;
+
+  const scrollY = window.scrollY;
+  const maxScroll = 300; // zone d’effet
+  const intensity = Math.min(scrollY / maxScroll, 1);
+
+  hero.style.setProperty(
+    "--kamon-opacity",
+    0.07 + intensity * 0.06
+  );
+});
