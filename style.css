@@ -622,37 +622,44 @@ p, li {
   letter-spacing: normal;
   word-spacing: normal;
 }
-
 /* ================================
-   Kamon en fond — page Practice
+   Kamon en fond du contenu
    ================================ */
 
-.practice-page .hero-text {
+.page-content {
   position: relative;
 }
 
-.practice-page .hero-text::before {
+.page-content::before {
   content: "";
-  position: absolute;
-  inset: -50px;
-  background-image: url("images/kamon.png");
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+   transform: translate(-50%, calc(-50% + var(--kamon-shift, 0px))) scale(0.95);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 360px;
+  background-size: contain;
   opacity: var(--kamon-opacity, 0);
-  z-index: 0;
   pointer-events: none;
+  z-index: 0;
   transition: opacity 2.5s ease, transform 2.5s ease;
-  transform: scale(0.95);
 }
 
-/* le texte reste au-dessus */
-.practice-page .hero-text > * {
+/* Le texte reste au-dessus */
+.page-content > * {
   position: relative;
   z-index: 1;
 }
 
-.practice-page .hero-text.kamon-visible::before {
-  opacity: 0.07;
-  transform: scale(1);
+.practice-page .page-content::before {
+  background-image: url("images/kamon-practice.png");
 }
+.schedule-page .page-content::before {
+  background-image: url("images/kamon-schedule.png");
+}
+.sesshin-page .page-content::before {
+  background-image: url("images/kamon-sesshin.png");
+}
+
