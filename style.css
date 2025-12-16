@@ -132,6 +132,25 @@ nav a:hover::after { width: 100%; }
 }
 .hero-text { position: relative; z-index: 20; padding: 0 6%; }
 
+.hero-text::before {
+  content: "";
+  position: absolute;
+  inset: -40px; /* permet au motif de respirer autour du texte */
+  background-image: url("images/kamon.png"); /* adapte le chemin */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 320px; /* taille du kamon */
+  opacity: 0.08; /* très léger, zen */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Le texte reste au-dessus */
+.hero-text > * {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-text p {
   color: #fff;
   font-size: 1.3rem;
