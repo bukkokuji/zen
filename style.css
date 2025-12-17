@@ -160,13 +160,15 @@ HERO SUBTITLES
   opacity: 0;
   filter: blur(2px);
   transition:
-    opacity 3.5s ease-in-out;,
+    opacity 3.5s ease-in-out,
     filter 3.5s ease;
 }
 
 .hero.loaded .hero-subtitle {
   opacity: 1;
+  filter: blur(0);
 }
+
 
 /* Content sections */
 main { padding-top: 110px; } /* prevent header overlap */
