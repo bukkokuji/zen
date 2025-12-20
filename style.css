@@ -160,6 +160,7 @@ HERO SUBTITLES
   line-height: 1.7;
   opacity: 0;
   filter: blur(2px);
+  will-change: opacity, filter;
   transition:
     opacity 3.5s ease-in-out,
     filter 3.5s ease;
