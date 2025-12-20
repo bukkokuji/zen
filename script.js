@@ -51,7 +51,7 @@ window.addEventListener("scroll", () => {
   const opacity = Math.min(scrollY / opacityMaxScroll, 1);
   document.documentElement.style.setProperty(
     "--kamon-opacity",
-    0.04 + opacity * 0.07
+    0.04 + opacity * 0.08
   );
 
   /* Déplacement vertical très léger */
