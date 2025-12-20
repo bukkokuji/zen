@@ -666,8 +666,7 @@ p, li {
   background-size: contain;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.25 !important;
-  outline: 2px solid red;
+  opacity: var(--kamon-opacity, 0);
 }
 
 /* Le texte reste au-dessus */
