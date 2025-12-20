@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
   );
 
   /* Déplacement vertical très léger */
-  const shift = Math.min(scrollY / 12, 40); // max 40px
+  const shift = Math.min(scrollY /  35, 25); // max 40px
   document.documentElement.style.setProperty(
     "--kamon-shift",
     `${shift}px`
