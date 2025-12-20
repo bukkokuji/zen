@@ -51,11 +51,11 @@ window.addEventListener("scroll", () => {
   const opacity = Math.min(scrollY / opacityMaxScroll, 1);
   document.documentElement.style.setProperty(
     "--kamon-opacity",
-    0.05 + opacity * 0.08
+    0.04 + opacity * 0.07
   );
 
   /* Déplacement vertical très léger */
-  const shift = Math.min(scrollY * 0.1, 40);
+  const shift = Math.min(scrollY * 0.1, 60);
   document.documentElement.style.setProperty(
     "--kamon-shift",
     `${shift}px`
@@ -63,8 +63,10 @@ window.addEventListener("scroll", () => {
 });
 
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.querySelector(".hero")?.classList.add("loaded");
-    }, 2500); // délai AVANT que le fondu commence
-  });
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const hero = document.querySelector(".hero");
+    if (hero) hero.classList.add("loaded");
+  }, 3000); // volontairement long
+});
+
