@@ -126,6 +126,8 @@ nav a:hover::after { width: 100%; }
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 10;
+  background-color: #000; /* sécurité visuelle */
 }
 .hero-overlay {
   position:absolute; inset:0; background: rgba(0,0,0,0.25);
@@ -657,20 +659,20 @@ p, li {
   left: 50%;
   width: 520px;
   height: 520px;
-   transform: translate(-50%, calc(-50% + var(--kamon-shift, 0px))) scale(0.95);
+  transform: translate(-50%, calc(-50% + var(--kamon-shift, 0px))) scale(0.95);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  opacity: var(--kamon-opacity, 0);
+  opacity: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   transition: opacity 2.5s ease, transform 2.5s ease;
 }
 
 /* Le texte reste au-dessus */
 .page-content > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .practice-page .page-content::before {
