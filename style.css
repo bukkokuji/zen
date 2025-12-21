@@ -162,8 +162,8 @@ nav a:hover::after { width: 100%; }
   filter: blur(2px);
   will-change: opacity, filter;
   transition:
-    opacity 3.5s ease-in-out,
-    filter 3.5s ease;
+    opacity 2.5s ease-in-out,
+    filter 2.5s ease;
 }
 
 .hero.loaded .hero-subtitle {
