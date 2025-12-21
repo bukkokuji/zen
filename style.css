@@ -623,6 +623,12 @@ body.sesshin-page figure.abbot.right img {
   break-inside: avoid;     /* évite les coupures moches */
 }
 
+/* Furigana discrets */
+.daily-schedule ruby rt {
+  font-size: 0.65em;
+  opacity: 0.7;
+  font-family: "Yuji Syuku", serif;
+}
 
 
 p, li {
