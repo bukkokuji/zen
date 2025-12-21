@@ -67,6 +67,6 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     const hero = document.querySelector(".hero");
     if (hero) hero.classList.add("loaded");
-  }, 3000); // volontairement long
+  }, 1500); //
 });
 
