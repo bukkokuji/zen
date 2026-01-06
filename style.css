@@ -427,6 +427,7 @@ PAGE CONTACT
 .instagram-link a:hover {
   color: inherit;          /* ne change pas la couleur */
   background-color: transparent;
+  opacity: 0.85;
 }
 
 
