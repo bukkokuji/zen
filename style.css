@@ -425,11 +425,10 @@ PAGE CONTACT
 }
 
 .instagram-link a:hover {
-  color: #e4405f;
-  background-color: rgba(228, 64, 95, 0.1);
-  border-radius: 6px;
-  padding: 4px 8px;
+  color: inherit;          /* ne change pas la couleur */
+  background-color: transparent;
 }
+
 
 .instagram-icon {
   width: 22px;
