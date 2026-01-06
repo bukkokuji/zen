@@ -693,7 +693,7 @@ p, li {
 
 
 /* ================================
-   Tableau page practice
+   Practice
    ================================ */
 
 
@@ -725,4 +725,45 @@ p, li {
   font-size: 2.2rem;
   line-height: 2.1;
   padding: 4px 0;
+}
+
+.practice-rules {
+  max-width: 900px;
+  margin: 80px auto 0;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.rules-placeholder {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.practice-documents {
+  max-width: 700px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.documents-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.documents-list li {
+  margin: 18px 0;
+}
+
+.documents-list a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.documents-list a:hover {
+  opacity: 0.65;
 }
