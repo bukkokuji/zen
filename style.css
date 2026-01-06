@@ -690,3 +690,39 @@ p, li {
 .sesshin-page .page-content::before {
   background-image: url("images/kamon-sesshin.jpg");
 }
+
+
+/* ================================
+   Tableau page practice
+   ================================ */
+
+
+.schedule-columns {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* style commun */
+.schedule-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Yuji Syuku", serif;
+}
+
+/* mouvement subtil */
+.schedule-morning {
+  transform: translateY(0);
+}
+
+.schedule-afternoon {
+  transform: translateY(20px); /* léger décalage initial */
+}
+
+/* texte */
+.schedule-columns li {
+  font-size: 2.2rem;
+  line-height: 2.1;
+  padding: 4px 0;
+}
