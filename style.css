@@ -818,3 +818,9 @@ p, li {
 .small-text {
   font-size: 0.9em;
 }
+
+/* Texte centré */
+
+.centered-text {
+  text-align: center;
+}
