@@ -822,5 +822,7 @@ p, li {
 /* Texte centré */
 
 .centered-text {
-  text-align: center;
+  text-align: center !important;
+  max-width: 800px;
+  margin: 0 auto;
 }
