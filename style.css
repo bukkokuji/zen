@@ -901,3 +901,72 @@ p, li {
   backdrop-filter: blur(2px);
   letter-spacing: 0.04em;
 }
+
+
+/* ================================
+   Activités régulières, bas de la page schedule
+   ================================ */
+
+.schedule-extra {
+  margin-top: 8em;
+}
+
+.schedule-extra-item {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 8em;
+}
+
+.schedule-extra-item figure {
+  flex: 0 0 340px;
+}
+
+.schedule-extra-item img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* alternance gauche / droite */
+.right-photo {
+  flex-direction: row-reverse;
+}
+
+.schedule-extra-text {
+  flex: 1;
+}
+
+.schedule-extra-text h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1em;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.schedule-extra-text p {
+  font-size: 1.2rem;
+  line-height: 2.2;
+  margin-bottom: 1.2em;
+}
+
+/* responsive mobile */
+@media (max-width: 900px) {
+
+  .schedule-extra-item,
+  .right-photo {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .schedule-extra-item figure {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .schedule-extra-item img {
+    height: auto;
+  }
+}
