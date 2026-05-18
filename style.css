@@ -851,10 +851,18 @@ p, li {
 }
 
 
-/* Page practice plus large */
+/* ================================
+   Page practice plus large
+   ================================ */
 
 .practice-page .content {
-  max-width: 1800px;
+  max-width: 1650px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.practice-page .practice-video.right {
+  margin-right: -80px;
 }
 
 /* ================================
