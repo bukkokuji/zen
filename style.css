@@ -848,6 +848,11 @@ p, li {
   display: block;
 }
 
+.practice-video video {
+  transform: translateY(var(--video-shift, 0px));
+  transition: transform 0.2s linear;
+}
+
 /* Page practice plus large */
 
 .practice-page .content {
