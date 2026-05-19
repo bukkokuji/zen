@@ -1264,13 +1264,18 @@ p, li {
   background-position: center;
   background-size: 420px;
 
-  opacity: 0.055;
+  opacity: 0.07;
 
   z-index: -1;
 
   transform: translateY(10px);
-}
 
+  filter:
+    sepia(1)
+    saturate(0.45)
+    hue-rotate(345deg)
+    brightness(1.08);
+}
 
 /* texte */
 
