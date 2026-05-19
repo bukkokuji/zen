@@ -976,7 +976,7 @@ p, li {
    ================================ */
 
 .presentation-block {
-  width: calc(100% - 40px);
+  width: calc(100% - 20px);
   margin: 0 auto;
 
   min-height: 560px;
@@ -1001,6 +1001,7 @@ p, li {
   overflow: hidden;
   position: relative;
   display: block;
+  margin: 0;
 }
 
 .presentation-image img {
@@ -1032,8 +1033,9 @@ p, li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
 
-  padding: 60px 4vw;
+  padding: 0px 4vw;
 
   background: #fff;
 
