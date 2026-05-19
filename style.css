@@ -974,9 +974,16 @@ p, li {
 /* ================================
    PAGE DE PRESENTATION
    ================================ */
+.presentation-page main,
+.presentation-page .page-content {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
 
 .presentation-block {
-  width: calc(100% - 20px);
+  width: calc(100vw - 40px);
   margin: 0 auto;
 
   min-height: 560px;
@@ -1035,7 +1042,7 @@ p, li {
   justify-content: center;
   margin: 0;
 
-  padding: 0px 4vw;
+  padding: 0px 3vw;
 
   background: #fff;
 
@@ -1265,7 +1272,7 @@ p, li {
 .presentation-intro-inner {
   position: relative;
 
-  max-width: 1450px;
+  max-width: 1700px;
 
   margin: 0 auto;
 
