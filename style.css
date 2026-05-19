@@ -1294,10 +1294,30 @@ p, li {
 /* =========================
    KAMON SABLE
 ========================= */
+/* =========================
+   KAMON SABLE
+========================= */
 
 .intro-kamon {
   position: absolute;
+  inset: 0;
 
+  z-index: -1;
+
+  opacity: 0.16;
+
+  pointer-events: none;
+
+  animation:
+    kamonFloat 9s ease-in-out infinite;
+}
+
+/* vrai kamon recoloré */
+
+.intro-kamon::before {
+  content: "";
+
+  position: absolute;
   inset: 0;
 
   background-image: url("images/kamon-practice.png");
@@ -1305,19 +1325,26 @@ p, li {
   background-position: center;
   background-size: 560px;
 
-  opacity: 0.12;
+  /* couleur sable */
+  background-color: #c7ae84;
 
-  z-index: -1;
+  /* fusion élégante */
+  mix-blend-mode: multiply;
+
+  /* masque du png */
+  -webkit-mask-image: url("images/kamon-practice.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 560px;
+
+  mask-image: url("images/kamon-practice.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 560px;
 
   filter:
-    sepia(100%)
-    saturate(240%)
-    hue-rotate(350deg)
-    brightness(1.02)
-    contrast(0.92);
-
-  animation:
-    kamonFloat 9s ease-in-out infinite;
+    blur(0.2px)
+    brightness(1.02);
 }
 
 @keyframes kamonFloat {
@@ -1333,7 +1360,6 @@ p, li {
     transform: translateY(0px) scale(1);
   }
 }
-
 
 /* =========================
    TITRE
