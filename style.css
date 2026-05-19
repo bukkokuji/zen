@@ -1247,7 +1247,7 @@ p, li {
 }
 
 /* ===================================
-   Intro présentation
+   INTRO PRESENTATION
 =================================== */
 
 .presentation-intro {
@@ -1256,8 +1256,8 @@ p, li {
   background: #fff;
 
   padding:
-    140px 8vw
-    140px 8vw;
+    180px 8vw
+    190px 8vw;
 
   overflow: hidden;
 }
@@ -1265,7 +1265,7 @@ p, li {
 .presentation-intro-inner {
   position: relative;
 
-  max-width: 1200px;
+  max-width: 1450px;
 
   margin: 0 auto;
 
@@ -1275,7 +1275,9 @@ p, li {
 }
 
 
-/* kamon */
+/* =========================
+   KAMON
+========================= */
 
 .intro-kamon {
   position: absolute;
@@ -1285,51 +1287,99 @@ p, li {
   background-image: url("images/kamon-practice.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 420px;
+  background-size: 520px;
 
-  opacity: 0.07;
+  opacity: 0.11;
 
   z-index: -1;
 
-  transform: translateY(10px);
+  transform: translateY(20px);
+
+  mix-blend-mode: multiply;
 
   filter:
-    sepia(1)
-    saturate(0.45)
+    sepia(100%)
+    saturate(140%)
     hue-rotate(345deg)
-    brightness(1.08);
+    brightness(1.05)
+    contrast(0.92);
 }
 
-/* texte */
 
-.presentation-intro p {
+/* =========================
+   TITRE
+========================= */
+
+.intro-title {
   font-family: "Yuji Syuku", serif;
 
-  font-size: 1.42rem;
+  font-size: 4.8rem;
+  font-weight: 400;
 
-  line-height: 2.7;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+
+  color: #1e1813;
+
+  margin-bottom: 75px;
+
+  text-align: center;
+
+  text-shadow:
+    0 0 1px rgba(0,0,0,0.08),
+    0 0 18px rgba(194,170,132,0.12);
+}
+
+
+/* =========================
+   TEXTE
+========================= */
+
+.intro-text {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  font-family: "Yuji Syuku", serif;
+
+  font-size: 1.72rem;
+
+  line-height: 2.9;
 
   letter-spacing: 0.06em;
 
   color: #2d241b;
 
-  margin-bottom: 2.8em;
-
-  text-align: center;
-}
-
-.intro-title {
-  font-family: "Yuji Syuku", serif;
-  font-size: 3.2rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
   text-align: center;
 
-  margin-bottom: 55px;
-
-  color: #1f1a17;
+  text-indent: 0;
 
   text-shadow:
-    0 0 1px rgba(0,0,0,0.08),
-    0 0 12px rgba(201, 176, 129, 0.08);
+    0 0 1px rgba(255,255,255,0.35);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .presentation-intro {
+    padding: 120px 8vw 130px;
+  }
+
+  .intro-title {
+    font-size: 3rem;
+    margin-bottom: 45px;
+  }
+
+  .intro-text {
+    font-size: 1.18rem;
+    line-height: 2.3;
+  }
+
+  .intro-kamon {
+    background-size: 320px;
+  }
 }
