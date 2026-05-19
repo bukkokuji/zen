@@ -977,6 +977,7 @@ p, li {
   width: 100%;
   margin: 0;
   padding: 0;
+  background: #fff;
 }
 
 /* =========================
@@ -993,12 +994,7 @@ p, li {
 
   text-align: center;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.96),
-      rgba(248,246,242,1)
-    );
+  background: #fff;
 }
 
 .presentation-intro p {
@@ -1018,14 +1014,16 @@ p, li {
 ========================= */
 
 .presentation-block {
-  width: 100%;
-  min-height: 720px;
+  width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  min-height: 760px;
 
   display: flex;
   align-items: stretch;
 
-  margin: 0;
-  padding: 0;
+  background: #fff;
 }
 
 .presentation-block.reverse {
@@ -1037,7 +1035,7 @@ p, li {
 ========================= */
 
 .presentation-image {
-  width: 50%;
+  width: 68%;
   overflow: hidden;
   position: relative;
   display: block;
@@ -1050,14 +1048,18 @@ p, li {
   object-fit: cover;
 
   transition:
-    transform 7s ease,
-    filter 1.2s ease;
+    transform 12s ease,
+    filter 1s ease;
 
-  filter: brightness(0.92);
+  transform: scale(1.01);
+
+  filter: brightness(0.95);
 }
 
-.presentation-block:hover img {
-  transform: scale(1.08);
+/* zoom lent et doux */
+
+.presentation-block:hover .presentation-image img {
+  transform: scale(1.07);
   filter: brightness(1);
 }
 
@@ -1066,7 +1068,7 @@ p, li {
 ========================= */
 
 .presentation-text {
-  width: 50%;
+  width: 32%;
 
   display: flex;
   flex-direction: column;
@@ -1075,56 +1077,54 @@ p, li {
 
   text-align: center;
 
-  padding: 90px 7vw;
+  padding: 70px 4vw;
 
-  background: #f8f6f2;
+  background: #fff;
 }
 
-/* TITRE KANJI */
+/* TITRE */
 
 .presentation-text h2 {
-  margin: 0 0 55px;
+  margin: 0 0 60px;
 
   font-size: 7rem;
   font-weight: 400;
   line-height: 1;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 }
 
-/* lien sur le titre */
+/* lien */
 
 .presentation-text h2 a {
-  position: relative;
-
   color: #111;
   text-decoration: none;
 
+  position: relative;
+
   transition:
-    color 0.4s ease,
-    letter-spacing 0.5s ease;
+    color 0.35s ease,
+    opacity 0.35s ease;
 }
 
-/* surbrillance élégante */
+/* soulignage sobre */
 
 .presentation-text h2 a::after {
   content: "";
 
   position: absolute;
-  left: -10px;
-  bottom: 8px;
+  left: 0;
+  bottom: -10px;
 
-  width: calc(100% + 20px);
-  height: 22px;
+  width: 100%;
+  height: 1px;
 
-  background: rgba(60,60,60,0.08);
+  background: rgba(0,0,0,0.35);
 
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
 
-  transition: transform 0.45s ease;
-
-  z-index: -1;
+  transition: transform 0.4s ease;
 }
 
 .presentation-text h2 a:hover::after {
@@ -1132,16 +1132,16 @@ p, li {
 }
 
 .presentation-text h2 a:hover {
-  letter-spacing: 0.24em;
+  color: #555;
 }
 
 /* PARAGRAPHE */
 
 .presentation-text p {
-  max-width: 560px;
+  max-width: 520px;
 
-  font-size: 1.38rem;
-  line-height: 2.7;
+  font-size: 1.34rem;
+  line-height: 2.8;
   letter-spacing: 0.04em;
 
   color: #3a2b1a;
@@ -1158,6 +1158,7 @@ p, li {
   .presentation-block,
   .presentation-block.reverse {
     flex-direction: column;
+    width: 100%;
     min-height: auto;
   }
 
