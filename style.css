@@ -1376,3 +1376,7 @@ p, li {
 .intro-vertical-text.visible span:nth-child(8) {
   transition-delay: 1.75s;
 }
+
+.intro-vertical-text.visible span:nth-child(8) {
+  transition-delay: 2s;
+}
