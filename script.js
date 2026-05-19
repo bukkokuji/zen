@@ -69,15 +69,3 @@ window.addEventListener("load", () => {
     if (hero) hero.classList.add("loaded");
   }, 1500); //
 });
-
-
-
-  /* Effets vidéo */
-window.addEventListener("scroll", () => {
-  const shift = window.scrollY * 0.03;
-
-  document.documentElement.style.setProperty(
-    "--video-shift",
-    `${shift}px`
-  );
-});
