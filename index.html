@@ -11,6 +11,22 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
+  
+  <script>
+const intro = document.querySelector('.presentation-intro');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      intro.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.18
+});
+
+observer.observe(intro);
+</script>
 <body>
 
  <div id="header-placeholder"></div>
