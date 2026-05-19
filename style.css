@@ -1323,7 +1323,7 @@ p, li {
 
 /* apparition au scroll */
 
-.presentation-intro.visible p {
+.presentation-intro p.show {
   opacity: 1;
 
   transform: translateY(0);
