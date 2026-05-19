@@ -1369,5 +1369,14 @@ p, li {
   transition-delay: 1.75s;
 }
 
+.intro-vertical-text.visible span:nth-child(7) {
+  transition-delay: 2.1s;
+}
+
+.intro-vertical-text.visible span:nth-child(8) {
+  transition-delay: 2.45s;
+}
+
+
 
 
