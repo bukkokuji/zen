@@ -1222,3 +1222,83 @@ p, li {
     line-height: 2.3;
   }
 }
+
+/* ===================================
+   Intro présentation
+=================================== */
+
+.presentation-intro {
+  position: relative;
+
+  background: #fff;
+
+  padding:
+    140px 8vw
+    140px 8vw;
+
+  overflow: hidden;
+}
+
+.presentation-intro-inner {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+
+/* kamon */
+
+.intro-kamon {
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url("images/kamon-practice.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 420px;
+
+  opacity: 0.055;
+
+  z-index: -1;
+
+  transform: translateY(10px);
+}
+
+
+/* texte */
+
+.presentation-intro p {
+  font-family: "Yuji Syuku", serif;
+
+  font-size: 1.42rem;
+
+  line-height: 2.7;
+
+  letter-spacing: 0.06em;
+
+  color: #2d241b;
+
+  margin-bottom: 2.8em;
+
+  text-align: center;
+}
+
+
+/* dernière note */
+
+.presentation-intro .intro-note {
+  margin-top: 5em;
+
+  font-size: 1.05rem;
+
+  line-height: 2.3;
+
+  color: #6a5844;
+}
