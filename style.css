@@ -1111,13 +1111,18 @@ p, li {
   background: linear-gradient(
     90deg,
     rgba(194,170,132,0),
-    rgba(194,170,132,0.95),
+    rgba(194,170,132,1),
     rgba(194,170,132,0)
   );
 
-  transition: width 0.8s ease;
-}
+  filter: blur(3px);
+  opacity: 0.75;
 
+  transition:
+    width 0.8s ease,
+    filter 0.8s ease,
+    opacity 0.8s ease;
+}
 
 /* halo très subtil */
 
@@ -1152,6 +1157,9 @@ p, li {
 
 .presentation-text h2 a:hover::after {
   width: 100%;
+
+  filter: blur(0.4px);
+  opacity: 1;
 }
 
 .presentation-text h2 a:hover::before {
