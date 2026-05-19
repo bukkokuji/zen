@@ -1273,7 +1273,7 @@ p, li {
   letter-spacing: 0.16em;
   line-height: 1.45;
 
-  color: #c2aa84;
+  color: #bfa27a;
 
   text-align: center;
 
@@ -1307,26 +1307,41 @@ p, li {
 
   opacity: 0;
 
-  transform: translateY(-60px);
+  transform: translateY(-70px);
 
   filter: blur(10px);
 
-  transition:
-    opacity 2.8s ease,
-    transform 2.8s ease,
-    filter 2.8s ease;
-
   text-shadow:
     0 0 1px rgba(255,255,255,0.35);
+
+  animation:
+    verticalRainReveal 3.8s ease forwards;
+
+  animation-delay: 0.4s;
 }
 
 
-/* apparition au scroll */
 
-.presentation-intro p.show {
-  opacity: 1;
 
-  transform: translateY(0);
+@keyframes verticalRainReveal {
 
-  filter: blur(0);
+  0% {
+    opacity: 0;
+
+    transform: translateY(-70px);
+
+    filter: blur(12px);
+  }
+
+  35% {
+    opacity: 0.35;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    filter: blur(0);
+  }
 }
