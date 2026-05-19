@@ -969,56 +969,17 @@ p, li {
   }
 }
 
-/* =================================
-   PRESENTATION PAGE
-================================= */
 
-.presentation-page {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-}
 
-/* =========================
-   INTRO
-========================= */
-
-.presentation-intro {
-  width: 100%;
-  padding: 180px 10vw 190px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  background: #fff;
-}
-
-.presentation-intro p {
-  max-width: 1200px;
-
-  font-size: 1.55rem;
-  line-height: 3;
-  letter-spacing: 0.08em;
-
-  color: #2b1c0f;
-
-  text-indent: 0;
-}
-
-/* =========================
-   BLOCS
-========================= */
+/* ================================
+   PAGE DE PRESENTATION
+   ================================ */
 
 .presentation-block {
-  width: calc(100% - 80px);
-
+  width: calc(100% - 40px);
   margin: 0 auto;
 
-  min-height: 760px;
+  min-height: 560px;
 
   display: flex;
   align-items: stretch;
@@ -1030,12 +991,13 @@ p, li {
   flex-direction: row-reverse;
 }
 
+
 /* =========================
    IMAGE
 ========================= */
 
 .presentation-image {
-  width: 68%;
+  width: 60%;
   overflow: hidden;
   position: relative;
   display: block;
@@ -1043,111 +1005,108 @@ p, li {
 
 .presentation-image img {
   width: 100%;
-  height: 100%;
+  height: 560px;
 
   object-fit: cover;
 
   transition:
-    transform 12s ease,
-    filter 1s ease;
+    transform 1.6s ease,
+    filter 0.8s ease;
 
-  transform: scale(1.01);
-
-  filter: brightness(0.95);
+  filter: brightness(0.92);
 }
 
-/* zoom lent et doux */
-
-.presentation-block:hover .presentation-image img {
-  transform: scale(1.07);
+.presentation-image:hover img {
+  transform: scale(1.04);
   filter: brightness(1);
 }
+
 
 /* =========================
    TEXTE
 ========================= */
 
 .presentation-text {
-  width: 32%;
+  width: 40%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
-  text-align: center;
-
-  padding: 70px 4vw;
+  padding: 60px 4vw;
 
   background: #fff;
+
+  box-sizing: border-box;
 }
 
-/* TITRE */
+/* texte à droite → aligné à gauche */
+
+.presentation-block .presentation-text {
+  text-align: left;
+  align-items: flex-start;
+}
+
+/* texte à gauche → aligné à droite */
+
+.presentation-block.reverse .presentation-text {
+  text-align: right;
+  align-items: flex-end;
+}
+
+
+/* =========================
+   TITRES
+========================= */
 
 .presentation-text h2 {
-  margin: 0 0 60px;
+  margin: 0 0 48px;
 
-  font-size: 7rem;
+  font-size: 6.3rem;
   font-weight: 400;
   line-height: 1;
 
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
 }
-
-/* lien */
 
 .presentation-text h2 a {
   color: #111;
   text-decoration: none;
 
-  position: relative;
-
   transition:
     color 0.35s ease,
-    opacity 0.35s ease;
+    text-shadow 0.35s ease;
 }
 
-/* soulignage sobre */
-
-.presentation-text h2 a::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-
-  width: 100%;
-  height: 1px;
-
-  background: rgba(0,0,0,0.35);
-
-  transform: scaleX(0);
-  transform-origin: center;
-
-  transition: transform 0.4s ease;
-}
-
-.presentation-text h2 a:hover::after {
-  transform: scaleX(1);
-}
+/* hover élégant sable + contour */
 
 .presentation-text h2 a:hover {
-  color: #555;
+  color: #c2aa84;
+
+  text-shadow:
+    -0.6px 0 #111,
+     0.6px 0 #111,
+     0 -0.6px #111,
+     0 0.6px #111;
 }
 
-/* PARAGRAPHE */
+
+/* =========================
+   PARAGRAPHES
+========================= */
 
 .presentation-text p {
   max-width: 520px;
 
   font-size: 1.34rem;
-  line-height: 2.8;
+  line-height: 2.7;
   letter-spacing: 0.04em;
 
   color: #3a2b1a;
 
   text-indent: 0;
 }
+
 
 /* =========================
    MOBILE
@@ -1167,12 +1126,14 @@ p, li {
     width: 100%;
   }
 
-  .presentation-image {
-    height: 420px;
+  .presentation-image img {
+    height: 380px;
   }
 
   .presentation-text {
-    padding: 90px 10vw;
+    padding: 70px 10vw;
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .presentation-text h2 {
@@ -1182,14 +1143,5 @@ p, li {
   .presentation-text p {
     font-size: 1.15rem;
     line-height: 2.3;
-  }
-
-  .presentation-intro {
-    padding: 120px 10vw 140px;
-  }
-
-  .presentation-intro p {
-    font-size: 1.2rem;
-    line-height: 2.4;
   }
 }
