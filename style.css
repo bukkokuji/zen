@@ -1273,7 +1273,7 @@ p, li {
   letter-spacing: 0.16em;
   line-height: 1.45;
 
-  color: #d2bea0;
+  color: #2d241b;
 
   text-align: center;
 
@@ -1293,7 +1293,7 @@ p, li {
 
   flex-direction: row-reverse;
 
-  gap: 30px;
+  gap: 27px;
 
   justify-content: center;
 
