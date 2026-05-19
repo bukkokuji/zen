@@ -12,21 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
   
-  <script>
-const intro = document.querySelector('.presentation-intro');
+<script>
+const introText = document.querySelector('.presentation-intro p');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      intro.classList.add('visible');
+      introText.classList.add('show');
     }
   });
 }, {
-  threshold: 0.18
+  threshold: 0.15
 });
 
-observer.observe(intro);
+observer.observe(introText);
 </script>
+  
 <body>
 
  <div id="header-placeholder"></div>
