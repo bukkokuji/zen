@@ -1115,7 +1115,7 @@ p, li {
     rgba(194,170,132,0)
   );
 
-  filter: blur(3px);
+  filter: blur(7px);
   opacity: 0.75;
 
   transition:
@@ -1158,7 +1158,7 @@ p, li {
 .presentation-text h2 a:hover::after {
   width: 100%;
 
-  filter: blur(0.4px);
+  filter: blur(0.8px);
   opacity: 1;
 }
 
@@ -1288,19 +1288,6 @@ p, li {
   margin-bottom: 2.8em;
 
   text-align: center;
-}
-
-
-/* dernière note */
-
-.presentation-intro .intro-note {
-  margin-top: 5em;
-
-  font-size: 1.05rem;
-
-  line-height: 2.3;
-
-  color: #6a5844;
 }
 
 .intro-title {
