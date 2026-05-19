@@ -1146,6 +1146,39 @@ p, li {
   opacity: 1;
 }
 
+
+
+/* =========================
+   LIGNE SABLE
+========================= */
+
+.presentation-text h2 a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(194,170,132,0),
+    rgba(194,170,132,1),
+    rgba(194,170,132,0)
+  );
+
+  filter: blur(7px);
+  opacity: 0.75;
+
+  transition:
+    width 0.8s ease,
+    filter 0.8s ease,
+    opacity 0.8s ease;
+}
+
+
 /* =========================
    PARAGRAPHES
 ========================= */
