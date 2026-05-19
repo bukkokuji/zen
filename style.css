@@ -1260,107 +1260,6 @@ p, li {
    INTRO PRESENTATION
 =================================== */
 
-.presentation-intro {
-  position: relative;
-
-  background: #fff;
-
-  padding:
-    170px 4vw
-    170px 4vw;
-
-  overflow: hidden;
-}
-
-
-/* conteneur */
-
-.presentation-intro-inner {
-  position: relative;
-
-  max-width: 1650px;
-
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 120px;
-
-  z-index: 2;
-}
-
-
-/* =========================
-   KAMON SABLE
-========================= */
-/* =========================
-   KAMON SABLE
-========================= */
-
-.intro-kamon {
-  position: absolute;
-  inset: 0;
-
-  z-index: -1;
-
-  opacity: 0.16;
-
-  pointer-events: none;
-
-  animation:
-    kamonFloat 9s ease-in-out infinite;
-}
-
-/* vrai kamon recoloré */
-
-.intro-kamon::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background-image: url("images/kamon-practice.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 560px;
-
-  /* couleur sable */
-  background-color: #c7ae84;
-
-  /* fusion élégante */
-  mix-blend-mode: multiply;
-
-  /* masque du png */
-  -webkit-mask-image: url("images/kamon-practice.png");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: 560px;
-
-  mask-image: url("images/kamon-practice.png");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 560px;
-
-  filter:
-    blur(0.2px)
-    brightness(1.02);
-}
-
-@keyframes kamonFloat {
-  0% {
-    transform: translateY(0px) scale(1);
-  }
-
-  50% {
-    transform: translateY(8px) scale(1.015);
-  }
-
-  100% {
-    transform: translateY(0px) scale(1);
-  }
-}
-
 /* =========================
    TITRE
 ========================= */
@@ -1372,25 +1271,16 @@ p, li {
   font-weight: 400;
 
   letter-spacing: 0.16em;
-  line-height: 1.5;
+  line-height: 1.45;
 
   color: #1f1a17;
 
   text-align: center;
 
-  margin: 0;
-
-  opacity: 0;
-
-  animation:
-    introFade 2.2s ease forwards,
-    titleRain 7s ease-in-out infinite;
-
-  animation-delay: 0.2s;
+  margin-bottom: 90px;
 
   text-shadow:
-    0 0 1px rgba(0,0,0,0.08),
-    0 0 22px rgba(194,170,132,0.14);
+    0 0 18px rgba(194,170,132,0.08);
 }
 
 
@@ -1402,116 +1292,41 @@ p, li {
   writing-mode: vertical-rl;
   text-orientation: mixed;
 
+  height: 760px;
+
+  margin: 0 auto;
+
   font-family: "Yuji Syuku", serif;
 
   font-size: 1.95rem;
 
-  line-height: 3.2;
+  line-height: 3.1;
   letter-spacing: 0.08em;
 
   color: #2d241b;
 
-  margin: 0;
-
-  height: 720px;
-
   opacity: 0;
 
-  animation:
-    introFade 2.5s ease forwards,
-    rainFloat 8s ease-in-out infinite;
+  transform: translateY(-60px);
 
-  animation-delay: 0.5s;
+  filter: blur(10px);
+
+  transition:
+    opacity 2.8s ease,
+    transform 2.8s ease,
+    filter 2.8s ease;
 
   text-shadow:
     0 0 1px rgba(255,255,255,0.35);
 }
 
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* apparition au scroll */
 
-@keyframes introFade {
-  from {
-    opacity: 0;
-    transform: translateY(35px);
-    filter: blur(8px);
-  }
+.presentation-intro.visible p {
+  opacity: 1;
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
+  transform: translateY(0);
 
-
-/* pluie douce verticale */
-
-@keyframes rainFloat {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(12px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-
-/* animation du titre assortie */
-
-@keyframes titleRain {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 1100px) {
-
-  .presentation-intro {
-    padding: 110px 8vw;
-  }
-
-  .presentation-intro-inner {
-    flex-direction: column;
-    gap: 70px;
-  }
-
-  .intro-title {
-    font-size: 3rem;
-  }
-
-  .presentation-intro p {
-    writing-mode: horizontal-tb;
-
-    height: auto;
-
-    font-size: 1.15rem;
-    line-height: 2.5;
-
-    text-align: center;
-  }
-
-  .intro-kamon {
-    background-size: 300px;
-  }
+  filter: blur(0);
 }
