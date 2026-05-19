@@ -1165,7 +1165,7 @@ p, li {
 .presentation-text h2 a:hover::before {
   opacity: 1;
 }
-}
+
 
 
 /* =========================
@@ -1173,17 +1173,40 @@ p, li {
 ========================= */
 
 .presentation-text p {
-  max-width: 520px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 
-  font-size: 1.34rem;
-  line-height: 2.7;
-  letter-spacing: 0.04em;
+  height: 360px;
+
+  font-size: 1.22rem;
+  line-height: 2.6;
+  letter-spacing: 0.08em;
 
   color: #3a2b1a;
 
   text-indent: 0;
+
+  margin: 0;
+
+  display: flex;
+  align-items: flex-start;
 }
 
+/* texte à droite de l'image */
+
+.presentation-block .presentation-text p {
+  align-self: flex-start;
+}
+
+/* texte à gauche de l'image */
+
+.presentation-block.reverse .presentation-text p {
+  align-self: flex-end;
+}
+
+.presentation-text {
+  gap: 24px;
+}
 
 /* =========================
    MOBILE
