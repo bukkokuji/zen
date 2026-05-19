@@ -997,7 +997,7 @@ p, li {
 ========================= */
 
 .presentation-image {
-  width: 60%;
+  width: 70%;
   overflow: hidden;
   position: relative;
   display: block;
@@ -1028,14 +1028,14 @@ p, li {
 ========================= */
 
 .presentation-text {
-  width: 40%;
+  width: 33%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
 
-  padding: 0px 4vw;
+  padding: 0px 6vw;
 
   background: #fff;
 
@@ -1092,38 +1092,6 @@ p, li {
   text-shadow:
     0 0 0 rgba(194,170,132,0);
 }
-
-
-/* =========================
-   LIGNE SABLE
-========================= */
-
-.presentation-text h2 a::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-
-  width: 0%;
-  height: 2px;
-
-  background: linear-gradient(
-    90deg,
-    rgba(194,170,132,0),
-    rgba(194,170,132,1),
-    rgba(194,170,132,0)
-  );
-
-  filter: blur(7px);
-  opacity: 0.75;
-
-  transition:
-    width 0.8s ease,
-    filter 0.8s ease,
-    opacity 0.8s ease;
-}
-
 
 /* =========================
    HALO
