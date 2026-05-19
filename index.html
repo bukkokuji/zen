@@ -11,22 +11,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
-
-<script>
-const introVertical = document.querySelector('.intro-vertical-text');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      introVertical.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.2
-});
-
-observer.observe(introVertical);
-</script>
   
 <body>
 
@@ -219,5 +203,22 @@ observer.observe(introVertical);
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Your script -->
   <script src="script.js"></script>
+
+  <script>
+const introVertical = document.querySelector('.intro-vertical-text');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      introVertical.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+observer.observe(introVertical);
+</script>
+  
 </body>
 </html>
