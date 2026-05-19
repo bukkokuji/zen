@@ -974,16 +974,9 @@ p, li {
 /* ================================
    PAGE DE PRESENTATION
    ================================ */
-.presentation-page main,
-.presentation-page .page-content {
-  width: 100%;
-  max-width: none;
-  padding: 0;
-  margin: 0;
-}
 
 .presentation-block {
-  width: calc(100vw - 40px);
+  width: calc(100% - 20px);
   margin: 0 auto;
 
   min-height: 560px;
@@ -1042,7 +1035,7 @@ p, li {
   justify-content: center;
   margin: 0;
 
-  padding: 0px 3vw;
+  padding: 0px 4vw;
 
   background: #fff;
 
@@ -1254,7 +1247,7 @@ p, li {
 }
 
 /* ===================================
-   INTRO PRESENTATION
+   Intro présentation
 =================================== */
 
 .presentation-intro {
@@ -1263,8 +1256,8 @@ p, li {
   background: #fff;
 
   padding:
-    180px 8vw
-    190px 8vw;
+    140px 8vw
+    140px 8vw;
 
   overflow: hidden;
 }
@@ -1272,7 +1265,7 @@ p, li {
 .presentation-intro-inner {
   position: relative;
 
-  max-width: 1700px;
+  max-width: 1200px;
 
   margin: 0 auto;
 
@@ -1282,9 +1275,7 @@ p, li {
 }
 
 
-/* =========================
-   KAMON
-========================= */
+/* kamon */
 
 .intro-kamon {
   position: absolute;
@@ -1294,99 +1285,51 @@ p, li {
   background-image: url("images/kamon-practice.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 520px;
+  background-size: 420px;
 
-  opacity: 0.11;
+  opacity: 0.07;
 
   z-index: -1;
 
-  transform: translateY(20px);
-
-  mix-blend-mode: multiply;
+  transform: translateY(10px);
 
   filter:
-    sepia(100%)
-    saturate(140%)
+    sepia(1)
+    saturate(0.45)
     hue-rotate(345deg)
-    brightness(1.05)
-    contrast(0.92);
+    brightness(1.08);
 }
 
+/* texte */
 
-/* =========================
-   TITRE
-========================= */
-
-.intro-title {
+.presentation-intro p {
   font-family: "Yuji Syuku", serif;
 
-  font-size: 4.8rem;
-  font-weight: 400;
+  font-size: 1.42rem;
 
-  letter-spacing: 0.16em;
-  line-height: 1.4;
-
-  color: #1e1813;
-
-  margin-bottom: 75px;
-
-  text-align: center;
-
-  text-shadow:
-    0 0 1px rgba(0,0,0,0.08),
-    0 0 18px rgba(194,170,132,0.12);
-}
-
-
-/* =========================
-   TEXTE
-========================= */
-
-.intro-text {
-  max-width: 1180px;
-
-  margin: 0 auto;
-
-  font-family: "Yuji Syuku", serif;
-
-  font-size: 1.72rem;
-
-  line-height: 2.9;
+  line-height: 2.7;
 
   letter-spacing: 0.06em;
 
   color: #2d241b;
 
+  margin-bottom: 2.8em;
+
   text-align: center;
-
-  text-indent: 0;
-
-  text-shadow:
-    0 0 1px rgba(255,255,255,0.35);
 }
 
+.intro-title {
+  font-family: "Yuji Syuku", serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-align: center;
 
-/* =========================
-   MOBILE
-========================= */
+  margin-bottom: 55px;
 
-@media (max-width: 1100px) {
+  color: #1f1a17;
 
-  .presentation-intro {
-    padding: 120px 8vw 130px;
-  }
-
-  .intro-title {
-    font-size: 3rem;
-    margin-bottom: 45px;
-  }
-
-  .intro-text {
-    font-size: 1.18rem;
-    line-height: 2.3;
-  }
-
-  .intro-kamon {
-    background-size: 320px;
-  }
+  text-shadow:
+    0 0 1px rgba(0,0,0,0.08),
+    0 0 12px rgba(201, 176, 129, 0.08);
 }
