@@ -1071,16 +1071,10 @@ p, li {
   letter-spacing: 0.12em;
 }
 
-.presentation-text h2 a {
-  color: #111;
-  text-decoration: none;
 
-  transition:
-    color 0.35s ease,
-    text-shadow 0.35s ease;
-}
-
-/* hover élégant sable + contour */
+/* =========================
+   LIEN TITRE
+========================= */
 
 .presentation-text h2 a {
   position: relative;
@@ -1088,15 +1082,21 @@ p, li {
   color: #111;
   text-decoration: none;
 
+  display: inline-block;
+
   transition:
     color 0.6s ease,
-    letter-spacing 0.6s ease;
+    letter-spacing 0.6s ease,
+    text-shadow 0.6s ease;
 
-  display: inline-block;
+  text-shadow:
+    0 0 0 rgba(194,170,132,0);
 }
 
 
-/* ligne sable discrète */
+/* =========================
+   LIGNE SABLE
+========================= */
 
 .presentation-text h2 a::after {
   content: "";
@@ -1124,7 +1124,10 @@ p, li {
     opacity 0.8s ease;
 }
 
-/* halo très subtil */
+
+/* =========================
+   HALO
+========================= */
 
 .presentation-text h2 a::before {
   content: "";
@@ -1147,12 +1150,19 @@ p, li {
 }
 
 
-/* animation hover */
+/* =========================
+   HOVER
+========================= */
 
 .presentation-text h2 a:hover {
-  color: #c2aa84;
+  color: #fff;
 
   letter-spacing: 0.16em;
+
+  text-shadow:
+    0 0 2px rgba(194,170,132,0.45),
+    0 0 10px rgba(194,170,132,0.35),
+    0 0 22px rgba(194,170,132,0.22);
 }
 
 .presentation-text h2 a:hover::after {
@@ -1165,8 +1175,6 @@ p, li {
 .presentation-text h2 a:hover::before {
   opacity: 1;
 }
-
-
 
 /* =========================
    PARAGRAPHES
