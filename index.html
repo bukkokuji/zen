@@ -207,7 +207,16 @@
   <!-- Your script -->
   <script src="script.js"></script>
 
+  
 <script>
+
+  const introTitle = document.querySelector('.intro-title');
+
+if (entry.isIntersecting) {
+  introVertical.classList.add('visible');
+  introTitle.classList.add('visible');
+}
+
 const introVertical = document.querySelector('.intro-vertical-text');
 
 const observer = new IntersectionObserver((entries) => {
