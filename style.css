@@ -1273,7 +1273,7 @@ p, li {
   letter-spacing: 0.16em;
   line-height: 1.45;
 
-  color: #2d241b;
+  color: #d2bea0;
 
   text-align: center;
 
@@ -1293,7 +1293,7 @@ p, li {
 
   flex-direction: row-reverse;
 
-  gap: 25px;
+  gap: 27px;
 
   justify-content: center;
 
@@ -1386,45 +1386,3 @@ p, li {
   transition-delay: 2.25s;
 }
 
-
-.intro-vertical-text {
-  display: flex;
-  flex-direction: row-reverse;
-
-  gap: 16px;
-
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.intro-vertical-text > span {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-
-  white-space: nowrap;
-}
-
-.intro-vertical-text > span > span {
-  display: inline-block;
-
-  opacity: 0;
-
-  transform:
-    translateY(-18px)
-    blur(6px);
-
-  transition:
-    opacity 1.1s ease,
-    transform 1.1s ease,
-    filter 1.1s ease;
-
-  filter: blur(6px);
-}
-
-.intro-vertical-text.visible > span > span {
-  opacity: 1;
-
-  transform: translateY(0);
-
-  filter: blur(0);
-}
