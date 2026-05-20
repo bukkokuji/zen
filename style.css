@@ -977,9 +977,10 @@ p, li {
 
 .presentation-block {
   width: calc(100% - 20px);
-  margin: 0 auto;
+  margin: 0;
 
   min-height: 560px;
+  line-height: 0;
 
   display: flex;
   align-items: stretch;
@@ -989,6 +990,16 @@ p, li {
 
 .presentation-block.reverse {
   flex-direction: row-reverse;
+}
+
+.presentation-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.presentation-block + .presentation-block {
+  margin-top: 0;
 }
 
 
@@ -1036,6 +1047,8 @@ p, li {
   margin: 0;
 
   padding: 0px 6vw;
+  
+  line-height: normal;
 
   background: #fff;
 
