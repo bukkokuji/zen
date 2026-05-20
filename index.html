@@ -207,17 +207,45 @@
   <!-- Your script -->
   <script src="script.js"></script>
 
-  <script>
+<script>
 const introVertical = document.querySelector('.intro-vertical-text');
+const lines = introVertical.querySelectorAll('span');
+
+/* découpe chaque caractère */
+
+lines.forEach((line, lineIndex) => {
+
+  const text = line.textContent;
+  line.textContent = "";
+
+  [...text].forEach((char, charIndex) => {
+
+    const charSpan = document.createElement("span");
+
+    charSpan.textContent = char;
+
+    charSpan.style.transitionDelay =
+      `${lineIndex * 0.22 + charIndex * 0.045}s`;
+
+    line.appendChild(charSpan);
+  });
+});
+
+
+/* déclenchement au scroll */
 
 const observer = new IntersectionObserver((entries) => {
+
   entries.forEach(entry => {
+
     if (entry.isIntersecting) {
       introVertical.classList.add('visible');
     }
+
   });
+
 }, {
-  threshold: 0.2
+  threshold: 0.18
 });
 
 observer.observe(introVertical);
