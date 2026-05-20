@@ -1085,13 +1085,14 @@ p, li {
   display: inline-block;
 
   transition:
-    color 0.6s ease,
-    letter-spacing 0.6s ease,
-    text-shadow 0.6s ease;
+    color 0.65s ease,
+    letter-spacing 0.65s ease,
+    text-shadow 0.65s ease;
 
   text-shadow:
     0 0 0 rgba(194,170,132,0);
 }
+
 
 /* =========================
    HALO
@@ -1106,8 +1107,9 @@ p, li {
   background:
     radial-gradient(
       circle,
-      rgba(194,170,132,0.22) 0%,
-      rgba(194,170,132,0) 75%
+      rgba(194,170,132,0.15) 0%,
+      rgba(194,170,132,0.04) 45%,
+      rgba(194,170,132,0) 78%
     );
 
   opacity: 0;
@@ -1116,36 +1118,6 @@ p, li {
 
   pointer-events: none;
 }
-
-
-/* =========================
-   HOVER
-========================= */
-
-.presentation-text h2 a:hover {
-  color: #fff;
-
-  letter-spacing: 0.16em;
-
-  text-shadow:
-    0 0 3px rgba(255,255,255,0.95),
-    0 0 10px rgba(194,170,132,0.95),
-    0 0 22px rgba(194,170,132,0.88),
-    0 0 42px rgba(194,170,132,0.72),
-    0 0 68px rgba(194,170,132,0.48);
-}
-
-.presentation-text h2 a:hover::after {
-  width: 100%;
-
-  filter: blur(0.8px);
-  opacity: 1;
-}
-
-.presentation-text h2 a:hover::before {
-  opacity: 1;
-}
-
 
 
 /* =========================
@@ -1165,12 +1137,12 @@ p, li {
   background: linear-gradient(
     90deg,
     rgba(194,170,132,0),
-    rgba(194,170,132,1),
+    rgba(194,170,132,0.92),
     rgba(194,170,132,0)
   );
 
   filter: blur(7px);
-  opacity: 0.75;
+  opacity: 0.72;
 
   transition:
     width 0.8s ease,
@@ -1178,6 +1150,33 @@ p, li {
     opacity 0.8s ease;
 }
 
+
+/* =========================
+   HOVER
+========================= */
+
+.presentation-text h2 a:hover {
+  color: #f8f6f2;
+
+  letter-spacing: 0.15em;
+
+  text-shadow:
+    0 0 2px rgba(255,255,255,0.55),
+    0 0 8px rgba(194,170,132,0.42),
+    0 0 18px rgba(194,170,132,0.26),
+    0 0 34px rgba(194,170,132,0.12);
+}
+
+.presentation-text h2 a:hover::after {
+  width: 100%;
+
+  filter: blur(1px);
+  opacity: 1;
+}
+
+.presentation-text h2 a:hover::before {
+  opacity: 1;
+}
 
 /* =========================
    PARAGRAPHES
