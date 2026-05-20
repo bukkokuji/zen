@@ -69,3 +69,48 @@ window.addEventListener("load", () => {
     if (hero) hero.classList.add("loaded");
   }, 1500); //
 });
+
+
+const introTitle = document.querySelector('.intro-title');
+const introVertical = document.querySelector('.intro-vertical-text');
+
+const lines = introVertical.querySelectorAll('span');
+
+lines.forEach((line, lineIndex) => {
+
+  const text = line.textContent;
+  line.textContent = "";
+
+  [...text].forEach((char, charIndex) => {
+
+    const charSpan = document.createElement("span");
+
+    charSpan.textContent = char;
+
+    charSpan.style.transitionDelay =
+      `${lineIndex * 0.22 + charIndex * 0.045}s`;
+
+    line.appendChild(charSpan);
+
+  });
+
+});
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      introVertical.classList.add('visible');
+      introTitle.classList.add('visible');
+
+    }
+
+  });
+
+}, {
+  threshold: 0.18
+});
+
+observer.observe(introVertical);
