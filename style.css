@@ -1263,14 +1263,31 @@ p, li {
 ========================= */
 
 .intro-title {
+
+  font-family: "Yuji Syuku", serif;
+
   position: relative;
+
+  font-size: 5rem;
+  font-weight: 400;
+
+  letter-spacing: 0.16em;
+  line-height: 1.45;
 
   color: #111;
 
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  opacity: 0;
+  transform: translateY(18px);
+
   transition:
+    opacity 1.8s ease,
+    transform 1.8s ease,
     text-shadow 1.4s ease;
 }
-
 
 /* halo au scroll */
 
@@ -1280,8 +1297,9 @@ p, li {
     0 0 2px rgba(194,170,132,0.18),
     0 0 8px rgba(194,170,132,0.14),
     0 0 18px rgba(194,170,132,0.10);
-
 }
+
+
 /* =========================
    TEXTE VERTICAL INTRO
 ========================= */
