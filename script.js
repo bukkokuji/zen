@@ -69,3 +69,11 @@ window.addEventListener("load", () => {
     if (hero) hero.classList.add("loaded");
   }, 1500); //
 });
+
+
+const introTitle = document.querySelector('.intro-title');
+
+if (entry.isIntersecting) {
+  introVertical.classList.add('visible');
+  introTitle.classList.add('visible');
+}
