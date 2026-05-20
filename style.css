@@ -1259,48 +1259,29 @@ p, li {
 =================================== */
 
 /* =========================
-   TITRE
+   TITRE INTRO
 ========================= */
 
 .intro-title {
-  font-family: "Yuji Syuku", serif;
-
-  font-size: 5rem;
-  font-weight: 400;
-
-  letter-spacing: 0.16em;
-  line-height: 1.45;
+  position: relative;
 
   color: #111;
 
-  text-align: center;
-
-  margin-bottom: 90px;
-
-  opacity: 0;
-  transform: translateY(18px);
-
   transition:
-    opacity 1.8s ease,
-    transform 1.8s ease,
-    text-shadow 2.2s ease;
+    text-shadow 1.4s ease;
 }
 
 
-/* apparition au scroll */
+/* halo au scroll */
 
 .intro-title.visible {
-  opacity: 1;
-
-  transform: translateY(0);
 
   text-shadow:
-    0 0 1px rgba(194,170,132,0.10),
-    0 0 10px rgba(194,170,132,0.10),
-    0 0 22px rgba(194,170,132,0.08);
+    0 0 2px rgba(194,170,132,0.18),
+    0 0 8px rgba(194,170,132,0.14),
+    0 0 18px rgba(194,170,132,0.10);
+
 }
-
-
 /* =========================
    TEXTE VERTICAL INTRO
 ========================= */
