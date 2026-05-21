@@ -1426,3 +1426,12 @@ p, li {
 .presentation-wide .presentation-block {
   width: calc(100% - 4px);
 }
+
+
+
+.presentation-page {
+  max-width: none;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
