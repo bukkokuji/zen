@@ -1441,3 +1441,33 @@ p, li {
   padding-left: 12px;
   padding-right: 12px;
 }
+
+
+
+
+/* =========================
+   Footer bukkokuji
+========================= */
+
+
+.footer-kanji {
+
+  text-align: center;
+
+  font-family: "Yuji Syuku", serif;
+
+  font-size: 3.6rem;
+
+  letter-spacing: 0.22em;
+
+  color: #111;
+
+  padding-bottom: 42px;
+
+  line-height: 1;
+
+  opacity: 0.96;
+
+  text-shadow:
+    0 0 1px rgba(0,0,0,0.08);
+}
