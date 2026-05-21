@@ -1417,3 +1417,12 @@ p, li {
   transition-delay: 2.25s;
 }
 
+
+
+/* =========================
+   PAGE PRESENTATION LARGE
+========================= */
+
+.presentation-wide .presentation-block {
+  width: calc(100% - 4px);
+}
