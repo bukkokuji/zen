@@ -71,46 +71,53 @@ window.addEventListener("load", () => {
 });
 
 
-const introTitle = document.querySelector('.intro-title');
-const introVertical = document.querySelector('.intro-vertical-text');
+document.addEventListener("DOMContentLoaded", () => {
 
-const lines = introVertical.querySelectorAll('span');
+  const introTitle = document.querySelector('.intro-title');
+  const introVertical = document.querySelector('.intro-vertical-text');
 
-lines.forEach((line, lineIndex) => {
+  if (!introVertical || !introTitle) return;
 
-  const text = line.textContent;
-  line.textContent = "";
+  const lines = introVertical.querySelectorAll('span');
 
-  [...text].forEach((char, charIndex) => {
+  lines.forEach((line, lineIndex) => {
 
-    const charSpan = document.createElement("span");
+    const text = line.textContent;
 
-    charSpan.textContent = char;
+    line.textContent = "";
 
-    charSpan.style.transitionDelay =
-      `${lineIndex * 0.22 + charIndex * 0.045}s`;
+    [...text].forEach((char, charIndex) => {
 
-    line.appendChild(charSpan);
+      const charSpan = document.createElement("span");
 
-  });
+      charSpan.textContent = char;
 
-});
+      charSpan.style.transitionDelay =
+        `${lineIndex * 0.22 + charIndex * 0.045}s`;
 
-const observer = new IntersectionObserver((entries) => {
+      line.appendChild(charSpan);
 
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-
-      introVertical.classList.add('visible');
-      introTitle.classList.add('visible');
-
-    }
+    });
 
   });
 
-}, {
-  threshold: 0.18
-});
+  const observer = new IntersectionObserver((entries) => {
 
-observer.observe(introVertical);
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        introVertical.classList.add('visible');
+        introTitle.classList.add('visible');
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.18
+  });
+
+  observer.observe(introVertical);
+
+});
