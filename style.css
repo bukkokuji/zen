@@ -1515,10 +1515,9 @@ p, li {
 
   display: block;
 
-  filter:
-    grayscale(100%)
-    brightness(0.45)
-    sepia(30%);
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease;
 }
 
 
@@ -1533,11 +1532,9 @@ p, li {
 
 .more-link:hover img {
 
-  filter:
-    grayscale(20%)
-    sepia(55%)
-    brightness(0.72);
+  transform: translateY(-2px);
 
+  opacity: 0.9;
 }
 
 /* =========================
