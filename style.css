@@ -1175,14 +1175,14 @@ p, li {
   text-shadow:
 
     /* contour proche du trait */
-    0 0 1px rgba(255,255,255,0.92),
+    0 0 1px rgba(255,255,255,0.96),
 
     /* halo sable collé aux kanji */
-    0 0 4px rgba(194,170,132,0.42),
-    0 0 8px rgba(194,170,132,0.30),
+    0 0 4px rgba(194,170,132,0.58),
+    0 0 8px rgba(194,170,132,0.44),
 
     /* diffusion très légère */
-    0 0 16px rgba(194,170,132,0.16);
+    0 0 16px rgba(194,170,132,0.24);
 }
 
 /* =========================
