@@ -1271,6 +1271,12 @@ p, li {
    INTRO PRESENTATION
 =================================== */
 
+.presentation-intro {
+
+  padding-top: 120px;
+
+  padding-bottom: 230px;
+}
 /* =========================
    TITRE INTRO
 ========================= */
