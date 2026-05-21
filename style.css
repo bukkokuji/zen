@@ -1268,7 +1268,7 @@ p, li {
 
 .presentation-intro {
 
-  padding-top: 30px;
+  padding-top: 0px;
 
   padding-bottom: 200px;
 }
@@ -1425,14 +1425,12 @@ p, li {
 ========================= */
 
 .presentation-page {
-  max-width: 1680px;
+  max-width: 1600px;
   margin: 0 auto;
 
-  padding-left: 28px;
-  padding-right: 28px;
+  padding-left: 90px;
+  padding-right: 90px;
 }
-
-
 
 /* =========================
    MORE LINKS
