@@ -1430,7 +1430,7 @@ p, li {
 ========================= */
 
 .presentation-wide .presentation-block {
-  width: calc(100% - 40px);
+  width: calc(100% - 70px);
 }
 
 
