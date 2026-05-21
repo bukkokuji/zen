@@ -1306,12 +1306,14 @@ p, li {
 
 .intro-title.visible {
 
+  opacity: 1;
+  transform: translateY(0);
+
   text-shadow:
     0 0 2px rgba(194,170,132,0.18),
     0 0 8px rgba(194,170,132,0.14),
     0 0 18px rgba(194,170,132,0.10);
 }
-
 
 /* =========================
    TEXTE VERTICAL INTRO
