@@ -1297,9 +1297,9 @@ p, li {
   transform: translateY(18px);
 
   transition:
-    opacity 1.8s ease,
-    transform 1.8s ease,
-    text-shadow 1.4s ease;
+    opacity 1.2s ease,
+    transform 1.2s ease,
+    text-shadow 1.0s ease;
 }
 
 /* halo au scroll */
