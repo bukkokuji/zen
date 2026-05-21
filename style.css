@@ -1112,26 +1112,25 @@ p, li {
 ========================= */
 
 .presentation-text h2 a::before {
+
   content: "";
 
   position: absolute;
-  inset: -12px;
+  inset: -4px;
 
   background:
     radial-gradient(
       circle,
-      rgba(186,158,118,0.32) 0%,
-      rgba(186,158,118,0.14) 45%,
-      rgba(194,170,132,0) 78%
+      rgba(194,170,132,0.08) 0%,
+      rgba(194,170,132,0) 72%
     );
 
   opacity: 0;
 
-  transition: opacity 0.7s ease;
+  transition: opacity 0.6s ease;
 
   pointer-events: none;
 }
-
 /* =========================
    LIGNE SABLE
 ========================= */
@@ -1168,26 +1167,22 @@ p, li {
 ========================= */
 
 .presentation-text h2 a:hover {
+
   color: #f8f6f2;
 
-  letter-spacing: 0.15em;
+  letter-spacing: 0.145em;
 
   text-shadow:
-    0 0 2px rgba(255,255,255,0.55),
-    0 0 8px rgba(194,170,132,0.42),
-    0 0 18px rgba(194,170,132,0.26),
-    0 0 34px rgba(194,170,132,0.12);
-}
 
-.presentation-text h2 a:hover::after {
-  width: 100%;
+    /* contour proche du trait */
+    0 0 1px rgba(255,255,255,0.92),
 
-  filter: blur(1px);
-  opacity: 1;
-}
+    /* halo sable collé aux kanji */
+    0 0 4px rgba(194,170,132,0.42),
+    0 0 8px rgba(194,170,132,0.30),
 
-.presentation-text h2 a:hover::before {
-  opacity: 1;
+    /* diffusion très légère */
+    0 0 16px rgba(194,170,132,0.16);
 }
 
 /* =========================
