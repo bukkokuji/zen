@@ -1273,7 +1273,7 @@ p, li {
 
 .presentation-intro {
 
-  padding-top: 80px;
+  padding-top: 30px;
 
   padding-bottom: 200px;
 }
@@ -1430,13 +1430,14 @@ p, li {
 ========================= */
 
 .presentation-wide .presentation-block {
-  width: calc(100% - 70px);
+  width: calc(100% - 90px);
 }
 
 
 .presentation-page {
-  max-width: 1680px;
-  margin: 0 auto;
+  max-width: 1780px;
+}
+
 
   padding-left: 12px;
   padding-right: 12px;
@@ -1552,7 +1553,7 @@ p, li {
 
   font-size: 3.6rem;
 
-  letter-spacing: 0.30em;
+  letter-spacing: 0.50em;
 
   color: #c2aa84;
 
