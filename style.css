@@ -1458,9 +1458,9 @@ p, li {
 
   font-size: 3.6rem;
 
-  letter-spacing: 0.22em;
+  letter-spacing: 0.30em;
 
-  color: #111;
+  color: #c2aa84;
 
   padding-bottom: 42px;
 
@@ -1469,5 +1469,6 @@ p, li {
   opacity: 0.96;
 
   text-shadow:
-    0 0 1px rgba(0,0,0,0.08);
+    0 0 1px rgba(194,170,132,0.18),
+    0 0 10px rgba(194,170,132,0.08);
 }
