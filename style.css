@@ -1444,6 +1444,100 @@ p, li {
 
 
 
+/* =========================
+   MORE LINKS
+========================= */
+
+.more-links-section {
+
+  padding:
+    140px 0
+    120px;
+
+  text-align: center;
+}
+
+.more-links-title {
+
+  font-family: "Yuji Syuku", serif;
+
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.18em;
+
+  color: #7f6a4e;
+
+  margin-bottom: 55px;
+
+  opacity: 0.92;
+}
+
+
+/* rangée logos */
+
+.more-links {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 70px;
+
+  flex-wrap: wrap;
+}
+
+
+/* liens */
+
+.more-link {
+
+  opacity: 0.72;
+
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease,
+    filter 0.45s ease;
+}
+
+
+/* logos */
+
+.more-link img {
+
+  height: 64px;
+
+  width: auto;
+
+  display: block;
+
+  filter:
+    grayscale(100%)
+    brightness(0.45)
+    sepia(30%);
+}
+
+
+/* hover */
+
+.more-link:hover {
+
+  opacity: 1;
+
+  transform: translateY(-4px);
+}
+
+.more-link:hover img {
+
+  filter:
+    grayscale(20%)
+    sepia(55%)
+    brightness(0.72);
+
+}
 
 /* =========================
    Footer bukkokuji
