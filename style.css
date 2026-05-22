@@ -1578,6 +1578,21 @@ p, li {
 
     overflow: hidden;
   }
+  
+}
+
+  /* =========================
+   Kamon fixe sur mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .page-content::before {
+
+    transform:
+      translate(-50%, -50%) scale(0.95) !important;
+
+  }
 
 }
 
