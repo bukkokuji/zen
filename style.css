@@ -1569,6 +1569,8 @@ p, li {
 @media (max-width: 768px) {
 
   .hero {
+    height: 52vh;
+    
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
