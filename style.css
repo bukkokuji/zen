@@ -1645,3 +1645,22 @@ p, li {
 
 }
 
+/* =========================
+   Sesshin mobile override
+========================= */
+
+.schedule-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .schedule-desktop {
+    display: none !important;
+  }
+
+  .schedule-mobile {
+    display: block !important;
+  }
+
+}
