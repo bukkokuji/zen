@@ -607,14 +607,6 @@ body.sesshin-page figure.abbot.right img {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-
-  .sesshin-schedule {
-    width: 96%;
-    max-width: none;
-  }
-
-}
 
 .sesshin-schedule ul {
   list-style: none;
