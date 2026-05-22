@@ -1568,7 +1568,21 @@ p, li {
 
 @media (max-width: 768px) {
 
- .hero {
+  .hero {
+
+    height: 52vh !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden;
+  }
+
+}
+
+
+.hero {
 
   background-size: var(--hero-size, cover);
   background-position: var(--hero-position, center center);
