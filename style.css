@@ -1581,23 +1581,21 @@ p, li {
 }
 
 
-/* =========================
-   Version mobile
-========================= */
-
 @media (max-width: 768px) {
 
   .hero {
 
-    height: 52vh !important;
+    background-size:
+      var(--hero-mobile-size, var(--hero-size, cover));
 
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
+    background-position:
+      var(--hero-mobile-position,
+      var(--hero-position, center center));
 
-    overflow: hidden;
+    background-repeat: no-repeat;
+
   }
-  
+
 }
 
   /* =========================
@@ -1618,12 +1616,3 @@ p, li {
 
 }
 
-
-.hero {
-
-  background-size: var(--hero-size, cover);
-  background-position: var(--hero-position, center center);
-
-  background-repeat: no-repeat;
-
-}
