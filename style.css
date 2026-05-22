@@ -1589,8 +1589,11 @@ p, li {
 
   .page-content::before {
 
-    transform:
-      translate(-50%, -50%) scale(0.95) !important;
+    position: absolute;
+
+    top: 50vh;
+
+    transform: translate(-50%, -50%);
 
   }
 
