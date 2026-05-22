@@ -1561,3 +1561,18 @@ p, li {
     0 0 1px rgba(194,170,132,0.18),
     0 0 10px rgba(194,170,132,0.08);
 }
+
+
+/* =========================
+   Version mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+}
