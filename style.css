@@ -1568,14 +1568,12 @@ p, li {
 
 @media (max-width: 768px) {
 
-  .hero {
-    height: 52vh;
-    
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
+ .hero {
 
-    background-attachment: scroll !important;
-  }
+  background-size: var(--hero-size, cover);
+  background-position: var(--hero-position, center center);
+
+  background-repeat: no-repeat;
+}
 
 }
