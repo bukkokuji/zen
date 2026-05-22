@@ -543,6 +543,24 @@ body.sesshin-page figure.abbot.right img {
   font-weight: bold;
 }
 
+/* Desktop visible */
+.schedule-mobile {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .schedule-desktop {
+    display: none;
+  }
+
+  .schedule-mobile {
+    display: block;
+  }
+
+}
+
 .rules ul {
   list-style: none;
   padding-left: 0;
