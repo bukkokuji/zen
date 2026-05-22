@@ -1569,9 +1569,9 @@ p, li {
 @media (max-width: 768px) {
 
   .hero {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 
 }
