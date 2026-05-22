@@ -43,9 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.style.setProperty("--kamon-shift", "0px");
 });
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+if (window.innerWidth > 768) {
 
+window.addEventListener("scroll", () => {
+  
   /* Intensité visuelle */
   const opacityMaxScroll = 600;
   const opacity = Math.min(scrollY / opacityMaxScroll, 1);
@@ -62,6 +63,10 @@ window.addEventListener("scroll", () => {
   );
 });
 
+  
+});
+
+}
 
 window.addEventListener("load", () => {
   setTimeout(() => {
