@@ -117,7 +117,17 @@ nav a::after {
 nav a:hover::after { width: 100%; }
 
 /* Hero */
-.hero { height: 100vh; background-size: cover; background-position: center; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; z-index: 10;
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+}
 .hero-overlay {
   position:absolute; inset:0; background: rgba(0,0,0,0.25);
 }
@@ -616,29 +626,12 @@ body.sesshin-page figure.abbot.right img {
 }
 
 
-.schedule-desktop,
-.schedule-mobile {
+.sesshin-schedule ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.schedule-desktop {
-  columns: 2;
+  columns: 2;              /* 2 colonnes élégantes */
   column-gap: 80px;
-}
-
-@media (max-width: 768px) {
-
-  .schedule-desktop {
-    display: none !important;
-  }
-
-  .schedule-mobile {
-    display: block !important;
-    columns: 1;
-  }
-
 }
 
 .sesshin-schedule li {
@@ -1258,47 +1251,39 @@ p, li {
    MOBILE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 
   .presentation-block,
   .presentation-block.reverse {
-
-    flex-direction: row;
-    min-height: 320px;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
   }
 
-  .presentation-image {
-    width: 58%;
-  }
-
+  .presentation-image,
   .presentation-text {
-    width: 42%;
-
-    padding:
-      20px 4vw;
-
-    gap: 14px;
+    width: 100%;
   }
 
   .presentation-image img {
-    height: 320px;
+    height: 380px;
+  }
+
+  .presentation-text {
+    padding: 70px 10vw;
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .presentation-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 18px;
+    font-size: 4.5rem;
   }
 
   .presentation-text p {
-    height: 210px;
-
-    font-size: 0.92rem;
-
-    line-height: 2.05;
+    font-size: 1.15rem;
+    line-height: 2.3;
   }
-
 }
-
 /* ===================================
    INTRO PRESENTATION
 =================================== */
@@ -1455,41 +1440,6 @@ p, li {
   transition-delay: 2.25s;
 }
 
-@media (max-width: 768px) {
-
-  .presentation-intro {
-    padding-left: 10vw;
-    padding-right: 10vw;
-    overflow: hidden;
-  }
-
-  .intro-title {
-    font-size: 2.7rem;
-    line-height: 1.4;
-    margin-bottom: 60px;
-  }
-
-  .intro-vertical-text {
-
-    gap: 10px;
-
-    justify-content: center;
-
-    width: fit-content;
-
-    margin: 0 auto;
-
-    max-width: 100%;
-  }
-
-  .intro-vertical-text span {
-
-    font-size: 1.15rem;
-
-    line-height: 2.1;
-  }
-
-}
 
 
 /* =========================
@@ -1666,22 +1616,3 @@ p, li {
 
 }
 
-/* =========================
-   Sesshin mobile override
-========================= */
-
-.schedule-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-
-  .schedule-desktop {
-    display: none !important;
-  }
-
-  .schedule-mobile {
-    display: block !important;
-  }
-
-}
