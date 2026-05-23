@@ -1475,21 +1475,35 @@ p, li {
 @media (max-width: 768px) {
 
   .presentation-intro {
-    padding-left: 7vw;
-    padding-right: 7vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    overflow: hidden;
   }
 
   .intro-title {
-    font-size: 3.2rem;
+    font-size: 2.7rem;
+    line-height: 1.4;
+    margin-bottom: 60px;
   }
 
   .intro-vertical-text {
-    gap: 14px;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 0 auto;
+
+    max-width: 100%;
   }
 
   .intro-vertical-text span {
-    font-size: 1.35rem;
-    line-height: 2.4;
+
+    font-size: 1.15rem;
+
+    line-height: 2.1;
   }
 
 }
