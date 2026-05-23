@@ -1251,39 +1251,47 @@ p, li {
    MOBILE
 ========================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
 
   .presentation-block,
   .presentation-block.reverse {
-    flex-direction: column;
-    width: 100%;
-    min-height: auto;
+
+    flex-direction: row;
+    min-height: 320px;
   }
 
-  .presentation-image,
+  .presentation-image {
+    width: 58%;
+  }
+
   .presentation-text {
-    width: 100%;
+    width: 42%;
+
+    padding:
+      20px 4vw;
+
+    gap: 14px;
   }
 
   .presentation-image img {
-    height: 380px;
-  }
-
-  .presentation-text {
-    padding: 70px 10vw;
-    align-items: center !important;
-    text-align: center !important;
+    height: 320px;
   }
 
   .presentation-text h2 {
-    font-size: 4.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 18px;
   }
 
   .presentation-text p {
-    font-size: 1.15rem;
-    line-height: 2.3;
+    height: 210px;
+
+    font-size: 0.92rem;
+
+    line-height: 2.05;
   }
+
 }
+
 /* ===================================
    INTRO PRESENTATION
 =================================== */
@@ -1440,6 +1448,27 @@ p, li {
   transition-delay: 2.25s;
 }
 
+@media (max-width: 768px) {
+
+  .presentation-intro {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .intro-title {
+    font-size: 3.2rem;
+  }
+
+  .intro-vertical-text {
+    gap: 14px;
+  }
+
+  .intro-vertical-text span {
+    font-size: 1.35rem;
+    line-height: 2.4;
+  }
+
+}
 
 
 /* =========================
@@ -1616,11 +1645,22 @@ p, li {
 
 }
 
+/* =========================
+   Sesshin mobile override
+========================= */
+
+.schedule-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
-  .presentation-intro {
-    padding-left: 12vw;
-    padding-right: 12vw;
+  .schedule-desktop {
+    display: none !important;
+  }
+
+  .schedule-mobile {
+    display: block !important;
   }
 
 }
