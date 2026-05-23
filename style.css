@@ -633,12 +633,29 @@ body.sesshin-page figure.abbot.right img {
 }
 
 
-.sesshin-schedule ul {
+.schedule-desktop,
+.schedule-mobile {
   list-style: none;
   padding: 0;
   margin: 0;
-  columns: 2;              /* 2 colonnes élégantes */
+}
+
+.schedule-desktop {
+  columns: 2;
   column-gap: 80px;
+}
+
+@media (max-width: 768px) {
+
+  .schedule-desktop {
+    display: none !important;
+  }
+
+  .schedule-mobile {
+    display: block !important;
+    columns: 1;
+  }
+
 }
 
 .sesshin-schedule li {
