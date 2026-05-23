@@ -1616,3 +1616,11 @@ p, li {
 
 }
 
+@media (max-width: 768px) {
+
+  .presentation-intro {
+    padding-left: 12vw;
+    padding-right: 12vw;
+  }
+
+}
